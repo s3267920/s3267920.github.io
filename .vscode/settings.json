@@ -1,0 +1,37 @@
+{
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.iconTheme": "material-icon-theme",
+  "breadcrumbs.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "emmet.triggerExpansionOnTab": true,
+  "editor.fontSize": 14,
+  "liveServer.settings.port": 8080,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "git-autoconfig.configList": [
+    {
+      "user.email": "s3267920@gmail.com",
+      "user.name": "rouca"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compact",
+      "extensionName": ".css",
+      "savePath": "/style"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/dist/style"
+    },
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/style"
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+}
