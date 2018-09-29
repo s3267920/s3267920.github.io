@@ -1,0 +1,49 @@
+//color
+$white: #ffffff;
+$yellow: #ffe180;
+$yellowR: rgba(255, 225, 128, 1);
+$darkGreen: #3f5d45;
+$whiteGreen: #eaf0ed;
+$lightGreen: #8da291;
+$darkGreenO: rgba(63, 93, 69, 0.8);
+$yellowO: rgba(255, 225, 128, 0.8);
+//font
+$pftc: PingFang TC;
+$HN: Helvetica Neue;
+$times: Times;
+
+$xl-size: 36px;
+$l-size: 24px;
+$m-size: 20px;
+$s-size: 16px;
+
+@mixin blur {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+  z-index: -1;
+}
+@mixin image {
+  position: absolute;
+  background-repeat: no-repeat;
+  top: -20px;
+  width: 45%;
+  height: 460px;
+  background-size: cover;
+  background-position: center center;
+}
+@mixin imageRWD {
+  position: absolute;
+  background-repeat: no-repeat;
+  top: -20px;
+  max-width: 460px;
+  height: 250px;
+  background-size: cover;
+  background-position-y: -7.2rem;
+}
