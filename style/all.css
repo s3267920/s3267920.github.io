@@ -1006,18 +1006,55 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 #login_content > .member_login .password_box,
 #login_content > .member_login .account_box {
+  margin-bottom: 15px;
+  max-width: 330px;
+  height: 56px;
   background-color: #eaf0ed;
 }
 
-#login_content > .member_login .password_box img,
-#login_content > .member_login .account_box img {
-  width: 24px;
-  height: 24px;
-}
-
-#login_content > .member_login .password_box input,
-#login_content > .member_login .account_box input {
+#login_content > .member_login .password_box > input,
+#login_content > .member_login .account_box > input {
   background-color: #eaf0ed;
   outline: none;
+  max-width: 300px;
+  height: 56px;
+}
+
+#login_content > .member_login .password_box .icon_key,
+#login_content > .member_login .password_box .icon_person,
+#login_content > .member_login .account_box .icon_key,
+#login_content > .member_login .account_box .icon_person {
+  vertical-align: middle;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #3f5d45;
+}
+
+#login_content > .member_login .password_box .icon_person,
+#login_content > .member_login .account_box .icon_person {
+  -webkit-mask-image: url(../images/person.svg);
+          mask-image: url(../images/person.svg);
+}
+
+#login_content > .member_login .password_box .icon_key,
+#login_content > .member_login .account_box .icon_key {
+  -webkit-mask-image: url(../images/key.svg);
+          mask-image: url(../images/key.svg);
+}
+
+#login_content > .member_login > label {
+  color: #eaf0ed;
+  display: inline;
+}
+
+#login_content > .member_login .remember {
+  margin-bottom: 25px;
+}
+
+#login_content > .member_login .login_btn {
+  background-color: #ffe180;
+  color: #3f5d45;
+  height: 65px;
 }
 /*# sourceMappingURL=all.css.map */

@@ -49,14 +49,17 @@
     <div class="member_login">
       <h2>會員登入</h2>
       <div class="account_box">
-        <img src="../images/person.svg" alt="">
+        <div class="icon_person"></div>
         <input type="text" name="account">
       </div>
       <div class="password_box">
-        <img src="../images/key.svg" alt="">
+        <div class="icon_key"></div>
         <input type="password" name="password">
       </div>
-      <input type="checkbox" name="remember" value="remember">記住我
+      <div class="remember">
+        <input type="checkbox" id="remember_btn" name="remember" value="remember">
+        <label for="remember">記住我</label>
+      </div>
       <input class="login_btn" type="submit" name="submit" value="登入帳號">
     </div>
     <div class="for_link">

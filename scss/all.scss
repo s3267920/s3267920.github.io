@@ -792,16 +792,44 @@ header {
     }
     .password_box,
     .account_box {
+      margin-bottom: 15px;
+      max-width: 330px;
+      height: 56px;
       background-color: $whiteGreen;
-      img {
-        width: 24px;
-        height: 24px;
-      }
-      input {
+      > input {
         background-color: $whiteGreen;
         outline: none;
-        // border: none;
+        max-width: 300px;
+        height: 56px;
       }
+      .icon_key,
+      .icon_person {
+        vertical-align: middle;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-color: $darkGreen;
+      }
+      //svg變色方式
+      .icon_person {
+        mask-image: url(../images/person.svg);
+      }
+      .icon_key {
+        mask-image: url(../images/key.svg);
+      }
+    }
+    > label {
+      color: $whiteGreen;
+      display: inline;
+    }
+    .remember {
+      margin-bottom: 25px;
+    }
+    .login_btn {
+      background-color: $yellow;
+      color: $darkGreen;
+
+      height: 65px;
     }
   }
 }
