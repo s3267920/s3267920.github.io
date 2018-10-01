@@ -774,28 +774,30 @@ header {
 //登入頁
 #login_content {
   margin: 60px 0;
+  display: flex;
+  justify-content: center;
   > .member_login {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 390px;
-    height: 380px;
+    width: $loginBoxWidth;
+    height: $loginBoxHeight;
     background-color: $darkGreen;
     > h2 {
       align-content: flex-start;
-      font-size: $xl-size;
-      margin: 40px 0;
+      font-size: nth($font, 4);
+      margin: 43px 0;
       order: 0;
       text-align: center;
       color: $whiteGreen;
       font-weight: 400;
     }
-    .password_box,
+    > .password_box,
     .account_box {
       margin: 0 auto;
-      margin-bottom: 15px;
-      width: 330px;
-      height: 56px;
+      margin-bottom: 16px;
+      width: $loginInputWidth;
+      height: $loginInputHeight;
       background-color: $whiteGreen;
       > input {
         background-color: $whiteGreen;
@@ -825,28 +827,56 @@ header {
         mask-image: url(../images/key.svg);
       }
     }
-    .remember {
+    > .remember {
       position: relative;
       margin-left: 30px;
       margin-bottom: 25px;
       > #remember_btn {
         display: none;
-        // transform: scale(1.143);
-        // opacity: 0.5;
-        // cursor: pointer;
+        //隱藏checkmark
+        + label::after {
+          content: none;
+        }
+        //顯示checkmark
+        &:checked + label::after {
+          content: "";
+        }
+        &:checked + label::before {
+          background-color: $yellow;
+          border: 1px solid $lightGreen;
+          box-shadow: 0 0 2px $lightGreen;
+        }
       }
       > .checkmark {
         position: relative;
+        z-index: 0;
         display: inline-block;
         vertical-align: middle;
         cursor: pointer;
         width: 16px;
         height: 16px;
         background-color: $whiteGreen;
-        &::before,
+        &::before {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          height: 16px;
+          width: 16px;
+          border: 1px solid $darkGreen;
+          top: 0px;
+        }
+        //製作checkmark
         &::after {
           position: absolute;
-          background-color: $yellow;
+          content: "";
+          display: inline-block;
+          height: 6px;
+          width: 9px;
+          left: 4px;
+          top: 4px;
+          border-left: 2px solid $darkGreen;
+          border-bottom: 2px solid $darkGreen;
+          transform: rotate(-45deg);
         }
       }
       > .remember_word {
@@ -855,12 +885,62 @@ header {
         margin-left: 5px;
       }
     }
+    .login_btn {
+      position: relative;
+      z-index: 10;
+      background-color: $yellow;
+      color: $darkGreen;
+      font-size: nth($font, 3);
+      font-weight: bold;
+      height: 65px;
+      &:focus {
+        outline: $darkGreen;
+        box-shadow: 0 0 1px $darkGreen;
+      }
+    }
   }
-  .login_btn {
-    background-color: $yellow;
-    color: $darkGreen;
-    font-size: nth($font, 3);
-    font-weight: bold;
-    height: 65px;
+  .link {
+    display: flex;
+    flex-direction: column;
+    width: $loginBoxWidth;
+    height: 350px;
+    margin: auto 0;
+    text-align: center;
+    background-color: $whiteGreen;
+    h3 {
+      font-size: nth($font, 3);
+      color: $lightGreen;
+      font-weight: 300;
+      margin: 42px auto;
+    }
+    .link_btn {
+      a {
+        display: inline;
+        background-color: $white;
+        margin-bottom: 16px;
+      }
+      input {
+        width: $loginBtnWidth;
+        height: $loginInputHeight;
+        background-repeat: no-repeat;
+        background-size: 30%;
+        background-position: center center;
+        margin-bottom: 16px;
+        &:focus {
+          outline: $lightGreen;
+          box-shadow: 0 0 5px $darkGreen;
+        }
+      }
+      .facebook_link {
+        background-size: 35%;
+        background-image: url(../images/Facebook_Logo-green.svg);
+      }
+      .google_link {
+        background-image: url(../images/Google_green_logo.svg);
+      }
+      .yahoo_link {
+        background-image: url(../images/Yahoo_green.svg);
+      }
+    }
   }
 }

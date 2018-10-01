@@ -3,19 +3,87 @@
   v2.0 | 20110126
   License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,8 +92,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -33,17 +110,21 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 
@@ -973,6 +1054,12 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 #login_content {
   margin: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #login_content > .member_login {
@@ -995,7 +1082,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   -ms-flex-line-pack: start;
       align-content: flex-start;
   font-size: 36px;
-  margin: 40px 0;
+  margin: 43px 0;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
@@ -1004,16 +1091,16 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   font-weight: 400;
 }
 
-#login_content > .member_login .password_box,
+#login_content > .member_login > .password_box,
 #login_content > .member_login .account_box {
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   width: 330px;
   height: 56px;
   background-color: #eaf0ed;
 }
 
-#login_content > .member_login .password_box > input,
+#login_content > .member_login > .password_box > input,
 #login_content > .member_login .account_box > input {
   background-color: #eaf0ed;
   outline: none;
@@ -1022,32 +1109,32 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   border: none;
 }
 
-#login_content > .member_login .password_box > input::-webkit-input-placeholder,
+#login_content > .member_login > .password_box > input::-webkit-input-placeholder,
 #login_content > .member_login .account_box > input::-webkit-input-placeholder {
   color: #8da291;
   vertical-align: middle;
 }
 
-#login_content > .member_login .password_box > input:-ms-input-placeholder,
+#login_content > .member_login > .password_box > input:-ms-input-placeholder,
 #login_content > .member_login .account_box > input:-ms-input-placeholder {
   color: #8da291;
   vertical-align: middle;
 }
 
-#login_content > .member_login .password_box > input::-ms-input-placeholder,
+#login_content > .member_login > .password_box > input::-ms-input-placeholder,
 #login_content > .member_login .account_box > input::-ms-input-placeholder {
   color: #8da291;
   vertical-align: middle;
 }
 
-#login_content > .member_login .password_box > input::placeholder,
+#login_content > .member_login > .password_box > input::placeholder,
 #login_content > .member_login .account_box > input::placeholder {
   color: #8da291;
   vertical-align: middle;
 }
 
-#login_content > .member_login .password_box .icon_key,
-#login_content > .member_login .password_box .icon_person,
+#login_content > .member_login > .password_box .icon_key,
+#login_content > .member_login > .password_box .icon_person,
 #login_content > .member_login .account_box .icon_key,
 #login_content > .member_login .account_box .icon_person {
   margin: 0 20px;
@@ -1058,30 +1145,46 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   background-color: #3f5d45;
 }
 
-#login_content > .member_login .password_box .icon_person,
+#login_content > .member_login > .password_box .icon_person,
 #login_content > .member_login .account_box .icon_person {
   -webkit-mask-image: url(../images/person.svg);
           mask-image: url(../images/person.svg);
 }
 
-#login_content > .member_login .password_box .icon_key,
+#login_content > .member_login > .password_box .icon_key,
 #login_content > .member_login .account_box .icon_key {
   -webkit-mask-image: url(../images/key.svg);
           mask-image: url(../images/key.svg);
 }
 
-#login_content > .member_login .remember {
+#login_content > .member_login > .remember {
   position: relative;
   margin-left: 30px;
   margin-bottom: 25px;
 }
 
-#login_content > .member_login .remember > #remember_btn {
+#login_content > .member_login > .remember > #remember_btn {
   display: none;
 }
 
-#login_content > .member_login .remember > .checkmark {
+#login_content > .member_login > .remember > #remember_btn + label::after {
+  content: none;
+}
+
+#login_content > .member_login > .remember > #remember_btn:checked + label::after {
+  content: "";
+}
+
+#login_content > .member_login > .remember > #remember_btn:checked + label::before {
+  background-color: #ffe180;
+  border: 1px solid #8da291;
+  -webkit-box-shadow: 0 0 2px #8da291;
+          box-shadow: 0 0 2px #8da291;
+}
+
+#login_content > .member_login > .remember > .checkmark {
   position: relative;
+  z-index: 0;
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
@@ -1090,22 +1193,105 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   background-color: #eaf0ed;
 }
 
-#login_content > .member_login .remember > .checkmark::before, #login_content > .member_login .remember > .checkmark::after {
+#login_content > .member_login > .remember > .checkmark::before {
   position: absolute;
-  background-color: #ffe180;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #3f5d45;
+  top: 0px;
 }
 
-#login_content > .member_login .remember > .remember_word {
+#login_content > .member_login > .remember > .checkmark::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 9px;
+  left: 4px;
+  top: 4px;
+  border-left: 2px solid #3f5d45;
+  border-bottom: 2px solid #3f5d45;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#login_content > .member_login > .remember > .remember_word {
   color: #eaf0ed;
   vertical-align: middle;
   margin-left: 5px;
 }
 
-#login_content .login_btn {
+#login_content > .member_login .login_btn {
+  position: relative;
+  z-index: 10;
   background-color: #ffe180;
   color: #3f5d45;
   font-size: 24px;
   font-weight: bold;
   height: 65px;
+}
+
+#login_content > .member_login .login_btn:focus {
+  outline: #3f5d45;
+  -webkit-box-shadow: 0 0 1px #3f5d45;
+          box-shadow: 0 0 1px #3f5d45;
+}
+
+#login_content .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 390px;
+  height: 350px;
+  margin: auto 0;
+  text-align: center;
+  background-color: #eaf0ed;
+}
+
+#login_content .link h3 {
+  font-size: 24px;
+  color: #8da291;
+  font-weight: 300;
+  margin: 42px auto;
+}
+
+#login_content .link .link_btn a {
+  display: inline;
+  background-color: #ffffff;
+  margin-bottom: 16px;
+}
+
+#login_content .link .link_btn input {
+  width: 330px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: center center;
+  margin-bottom: 16px;
+}
+
+#login_content .link .link_btn input:focus {
+  outline: #8da291;
+  -webkit-box-shadow: 0 0 5px #3f5d45;
+          box-shadow: 0 0 5px #3f5d45;
+}
+
+#login_content .link .link_btn .facebook_link {
+  background-size: 35%;
+  background-image: url(../images/Facebook_Logo-green.svg);
+}
+
+#login_content .link .link_btn .google_link {
+  background-image: url(../images/Google_green_logo.svg);
+}
+
+#login_content .link .link_btn .yahoo_link {
+  background-image: url(../images/Yahoo_green.svg);
 }
 /*# sourceMappingURL=all.css.map */
