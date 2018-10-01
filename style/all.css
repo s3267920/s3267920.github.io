@@ -1006,8 +1006,9 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 #login_content > .member_login .password_box,
 #login_content > .member_login .account_box {
+  margin: 0 auto;
   margin-bottom: 15px;
-  max-width: 330px;
+  width: 330px;
   height: 56px;
   background-color: #eaf0ed;
 }
@@ -1016,14 +1017,40 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 #login_content > .member_login .account_box > input {
   background-color: #eaf0ed;
   outline: none;
-  max-width: 300px;
+  width: 260px;
   height: 56px;
+  border: none;
+}
+
+#login_content > .member_login .password_box > input::-webkit-input-placeholder,
+#login_content > .member_login .account_box > input::-webkit-input-placeholder {
+  color: #8da291;
+  vertical-align: middle;
+}
+
+#login_content > .member_login .password_box > input:-ms-input-placeholder,
+#login_content > .member_login .account_box > input:-ms-input-placeholder {
+  color: #8da291;
+  vertical-align: middle;
+}
+
+#login_content > .member_login .password_box > input::-ms-input-placeholder,
+#login_content > .member_login .account_box > input::-ms-input-placeholder {
+  color: #8da291;
+  vertical-align: middle;
+}
+
+#login_content > .member_login .password_box > input::placeholder,
+#login_content > .member_login .account_box > input::placeholder {
+  color: #8da291;
+  vertical-align: middle;
 }
 
 #login_content > .member_login .password_box .icon_key,
 #login_content > .member_login .password_box .icon_person,
 #login_content > .member_login .account_box .icon_key,
 #login_content > .member_login .account_box .icon_person {
+  margin: 0 20px;
   vertical-align: middle;
   display: inline-block;
   width: 24px;
@@ -1043,18 +1070,42 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
           mask-image: url(../images/key.svg);
 }
 
-#login_content > .member_login > label {
-  color: #eaf0ed;
-  display: inline;
-}
-
 #login_content > .member_login .remember {
+  position: relative;
+  margin-left: 30px;
   margin-bottom: 25px;
 }
 
-#login_content > .member_login .login_btn {
+#login_content > .member_login .remember > #remember_btn {
+  display: none;
+}
+
+#login_content > .member_login .remember > .checkmark {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-color: #eaf0ed;
+}
+
+#login_content > .member_login .remember > .checkmark::before, #login_content > .member_login .remember > .checkmark::after {
+  position: absolute;
+  background-color: #ffe180;
+}
+
+#login_content > .member_login .remember > .remember_word {
+  color: #eaf0ed;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+#login_content .login_btn {
   background-color: #ffe180;
   color: #3f5d45;
+  font-size: 24px;
+  font-weight: bold;
   height: 65px;
 }
 /*# sourceMappingURL=all.css.map */

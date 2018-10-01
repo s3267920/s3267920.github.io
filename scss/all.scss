@@ -792,18 +792,25 @@ header {
     }
     .password_box,
     .account_box {
+      margin: 0 auto;
       margin-bottom: 15px;
-      max-width: 330px;
+      width: 330px;
       height: 56px;
       background-color: $whiteGreen;
       > input {
         background-color: $whiteGreen;
         outline: none;
-        max-width: 300px;
+        width: 260px;
         height: 56px;
+        border: none;
+        &::placeholder {
+          color: $lightGreen;
+          vertical-align: middle;
+        }
       }
       .icon_key,
       .icon_person {
+        margin: 0 20px;
         vertical-align: middle;
         display: inline-block;
         width: 24px;
@@ -818,18 +825,42 @@ header {
         mask-image: url(../images/key.svg);
       }
     }
-    > label {
-      color: $whiteGreen;
-      display: inline;
-    }
     .remember {
+      position: relative;
+      margin-left: 30px;
       margin-bottom: 25px;
+      > #remember_btn {
+        display: none;
+        // transform: scale(1.143);
+        // opacity: 0.5;
+        // cursor: pointer;
+      }
+      > .checkmark {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        background-color: $whiteGreen;
+        &::before,
+        &::after {
+          position: absolute;
+          background-color: $yellow;
+        }
+      }
+      > .remember_word {
+        color: $whiteGreen;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
     }
-    .login_btn {
-      background-color: $yellow;
-      color: $darkGreen;
-
-      height: 65px;
-    }
+  }
+  .login_btn {
+    background-color: $yellow;
+    color: $darkGreen;
+    font-size: nth($font, 3);
+    font-weight: bold;
+    height: 65px;
   }
 }
