@@ -56,3 +56,15 @@ $s-size: 16px;
   background-size: cover;
   background-position-y: -7.2rem;
 }
+
+@mixin Hcenter {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  transform: (translateY(-50%));
+}
+
+@mixin icon {
+  width: 24px;
+  height: 24px;
+}
