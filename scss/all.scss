@@ -107,7 +107,6 @@ header {
     }
     .nav {
       float: right;
-      display: inline;
       .nav-menu {
         display: inline-block;
         li {
@@ -554,8 +553,6 @@ header {
           font-weight: 500;
           padding: 20px 60px;
           width: 300px;
-          span {
-          }
         }
         a:hover,
         a:active {
@@ -917,7 +914,6 @@ header {
       a {
         display: inline;
         background-color: $white;
-        margin-bottom: 16px;
       }
       input {
         width: $loginBtnWidth;
@@ -934,12 +930,21 @@ header {
       .facebook_link {
         background-size: 35%;
         background-image: url(../images/Facebook_Logo-green.svg);
+        &:focus {
+          background-image: url(../images/Facebook_Logo.svg);
+        }
       }
       .google_link {
         background-image: url(../images/Google_green_logo.svg);
+        &:focus {
+          background-image: url(../images/Google_2015_logo.svg);
+        }
       }
       .yahoo_link {
         background-image: url(../images/Yahoo_green.svg);
+        &:focus {
+          background-image: url(../images/Yahoo.svg);
+        }
       }
     }
   }
@@ -970,6 +975,9 @@ header {
       align-items: center;
       padding: 20px 0;
       border-bottom: 1px solid $whiteGreen;
+      &:last-child {
+        border-bottom: none;
+      }
       > .cart_list_img {
         display: inline-block;
         background-position: center center;
@@ -1027,7 +1035,43 @@ header {
   }
   .bill {
     width: 300px;
-    height: 300px;
+    height: 256px;
     background-color: $darkGreen;
+    color: $whiteGreen;
+    > h4 {
+      text-align: center;
+      font-size: nth($font, 3);
+      font-weight: 300;
+      margin: 20px auto;
+    }
+    .line {
+      border-top: 1px solid $whiteGreen;
+      margin: 0 20px;
+    }
+    > ul {
+      margin: 20px 18px;
+      li {
+        margin-bottom: 10px;
+        font-weight: lighter;
+        > span {
+          float: right;
+          margin-right: 5px;
+        }
+      }
+      .total_title {
+        font-size: nth($font, 2);
+        font-weight: 400;
+        margin-top: 20px;
+      }
+    }
+    .checkout {
+      width: 300px;
+      height: 65px;
+      background-color: $yellow;
+      color: $darkGreen;
+      font-weight: bold;
+      text-align: center;
+      font-size: nth($font, 3);
+    }
   }
 }

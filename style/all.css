@@ -263,7 +263,6 @@ header .nav-bar .cart a .cart-icon {
 
 header .nav-bar .nav {
   float: right;
-  display: inline;
 }
 
 header .nav-bar .nav .nav-menu {
@@ -1264,7 +1263,6 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 #login_content .link .link_btn a {
   display: inline;
   background-color: #ffffff;
-  margin-bottom: 16px;
 }
 
 #login_content .link .link_btn input {
@@ -1287,12 +1285,24 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   background-image: url(../images/Facebook_Logo-green.svg);
 }
 
+#login_content .link .link_btn .facebook_link:focus {
+  background-image: url(../images/Facebook_Logo.svg);
+}
+
 #login_content .link .link_btn .google_link {
   background-image: url(../images/Google_green_logo.svg);
 }
 
+#login_content .link .link_btn .google_link:focus {
+  background-image: url(../images/Google_2015_logo.svg);
+}
+
 #login_content .link .link_btn .yahoo_link {
   background-image: url(../images/Yahoo_green.svg);
+}
+
+#login_content .link .link_btn .yahoo_link:focus {
+  background-image: url(../images/Yahoo.svg);
 }
 
 #cart_content {
@@ -1338,6 +1348,10 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
           align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #eaf0ed;
+}
+
+#cart_content .my_cart .cart_list:last-child {
+  border-bottom: none;
 }
 
 #cart_content .my_cart .cart_list > .cart_list_img {
@@ -1407,7 +1421,50 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 #cart_content .bill {
   width: 300px;
-  height: 300px;
+  height: 256px;
   background-color: #3f5d45;
+  color: #eaf0ed;
+}
+
+#cart_content .bill > h4 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 20px auto;
+}
+
+#cart_content .bill .line {
+  border-top: 1px solid #eaf0ed;
+  margin: 0 20px;
+}
+
+#cart_content .bill > ul {
+  margin: 20px 18px;
+}
+
+#cart_content .bill > ul li {
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+#cart_content .bill > ul li > span {
+  float: right;
+  margin-right: 5px;
+}
+
+#cart_content .bill > ul .total_title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+#cart_content .bill .checkout {
+  width: 300px;
+  height: 65px;
+  background-color: #ffe180;
+  color: #3f5d45;
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
 }
 /*# sourceMappingURL=all.css.map */
