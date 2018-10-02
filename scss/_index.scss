@@ -1,0 +1,207 @@
+.home-banner {
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+.banner-card {
+  ul {
+    width: 780px;
+    display: flex;
+    white-space: nowrap;
+    position: absolute;
+    justify-content: center;
+    font-size: 0;
+    bottom: -7%;
+    margin-left: 9%;
+    li {
+      max-width: 33.3%;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      .background-box {
+        background: $darkGreenO;
+        display: inline-block;
+        a {
+          line-height: 25px;
+          text-align: center;
+          display: inline-block;
+          padding: 4.5vw 8.5vw;
+          color: $white;
+          font-size: $l-size;
+          letter-spacing: 8px;
+          font-weight: 100;
+          writing-mode: vertical-lr;
+          text-decoration: none;
+        }
+      }
+      .background-box:hover {
+        background-color: $yellowO;
+        cursor: pointer;
+        a {
+          color: $darkGreen;
+          font-weight: bold;
+        }
+      }
+    }
+    .today-choose::before {
+      @include blur;
+      background-image: url(../images/brooke-lark-230642-unsplash.jpg);
+    }
+    .popular::before {
+      @include blur;
+      background-image: url(/images/whitney-wright-356670-unsplash.jpg);
+    }
+    .new-product::before {
+      @include blur;
+      background-image: url(../images/food-photographer-jennifer-pallian-306919-unsplash.jpg);
+    }
+    .popular {
+      border-right: 2px solid #fff;
+      border-left: 2px solid #fff;
+    }
+  }
+}
+#content {
+  margin-top: 250px;
+  ul {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    li {
+      margin-top: 105px;
+      .context {
+        position: relative;
+        height: 420px;
+        background-color: $whiteGreen;
+        .text-right {
+          .image-left {
+            @include image;
+            left: 40px;
+            background-image: url(../images/le-buzz-576478-unsplash.jpg);
+          }
+          h2 {
+            background-image: url(../images/lg-為什麼選擇了做甜點.svg);
+            background-repeat: no-repeat;
+            height: 307px;
+            margin-right: 40px;
+            position: absolute;
+            top: -20px;
+            right: 0px;
+            width: 88px;
+          }
+          p {
+            writing-mode: vertical-rl;
+            position: absolute;
+            right: 210px;
+            line-height: 200%;
+            margin: 70px 0;
+            color: $lightGreen;
+            font-weight: lighter;
+          }
+        }
+        .text-left {
+          .image-right {
+            @include image;
+            right: 40px;
+            background-image: url(../images/monika-grabkowska-325047-unsplash.jpg);
+          }
+          h2 {
+            background-image: url(../images/lg-為什麼一定要吃甜點.svg);
+            background-repeat: no-repeat;
+            height: 307px;
+            margin-right: 40px;
+            position: absolute;
+            top: -25px;
+            left: 390px;
+            width: 88px;
+          }
+          p {
+            writing-mode: vertical-rl;
+            position: absolute;
+            left: 55px;
+            line-height: 200%;
+            margin: 70px 0;
+            color: $lightGreen;
+            font-weight: lighter;
+          }
+        }
+      }
+      .only-word {
+        display: block;
+        width: 90px;
+        margin: 0 auto;
+        margin-top: -10px;
+      }
+      .product {
+        ul {
+          margin: 30px 30px 60px 30px;
+          li {
+            float: left;
+            margin: 0px 10px;
+            margin-bottom: 60px;
+            .product-box {
+              position: relative;
+              .product-box-img {
+                width: 300px;
+                height: 315px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+              }
+              .today-box {
+                position: absolute;
+                left: 20px;
+                background-color: $darkGreen;
+                color: $white;
+                padding: 10px;
+                writing-mode: vertical-lr;
+                letter-spacing: 5px;
+                font-weight: 300;
+              }
+              .like {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 25px;
+              }
+            }
+            .product-box-item {
+              width: 300px;
+              height: 56px;
+              .product-box-dollar,
+              .product-box-name {
+                height: 56px;
+                font-size: $m-size;
+                float: left;
+                color: $darkGreen;
+                border: 1px solid $whiteGreen;
+                line-height: 56px;
+                text-align: center;
+              }
+              .product-box-name {
+                width: 171px;
+                border-right: none;
+                font-weight: 300;
+              }
+              .product-box-dollar {
+                width: 126px;
+                font-weight: 500;
+              }
+            }
+            .add-btn {
+              clear: both;
+              display: block;
+              font-size: $l-size;
+              color: $darkGreen;
+              background-color: $whiteGreen;
+              border: 1px solid $whiteGreen;
+              border-top: none;
+              font-weight: bold;
+              padding: 16px 89px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
