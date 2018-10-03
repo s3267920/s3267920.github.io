@@ -1842,7 +1842,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   display: inline-block;
   font-size: 36px;
   color: #eaf0ed;
-  margin: 35px 40px;
+  margin: 30px 40px;
   margin-right: 0;
   font-weight: 400;
 }
@@ -2055,6 +2055,11 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   font-weight: 600;
 }
 
+#checkout_content .payment h4 {
+  margin: 35px 40px;
+  margin-right: 0;
+}
+
 #checkout_content .payment .credit_card {
   margin: 0 auto;
   width: 82.6%;
@@ -2132,8 +2137,9 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   background-attachment: scroll;
 }
 
-#checkout_content .receipt {
-  height: 485px;
+#checkout_content .receipt h4 {
+  margin: 35px 40px;
+  margin-right: 0;
 }
 
 #checkout_content .receipt .receipt_btn {
@@ -2162,21 +2168,25 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   color: #3f5d45;
 }
 
-#checkout_content .receipt .CUI {
+#checkout_content .receipt_cui {
+  height: 485px;
+}
+
+#checkout_content .receipt_cui .CUI {
   margin: 0 auto;
   width: 82.6%;
   margin-bottom: 10px;
 }
 
-#checkout_content .receipt .CUI label {
+#checkout_content .receipt_cui .CUI label {
   width: 100%;
   color: #eaf0ed;
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-#checkout_content .receipt .CUI input,
-#checkout_content .receipt .CUI select {
+#checkout_content .receipt_cui .CUI input,
+#checkout_content .receipt_cui .CUI select {
   width: 100%;
   height: 56px;
   color: #8da291;
@@ -2186,28 +2196,102 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   font-size: 16px;
 }
 
-#checkout_content .receipt .CUI input::-webkit-input-placeholder,
-#checkout_content .receipt .CUI select::-webkit-input-placeholder {
+#checkout_content .receipt_cui .CUI input::-webkit-input-placeholder,
+#checkout_content .receipt_cui .CUI select::-webkit-input-placeholder {
   color: #8da291;
   font-weight: 300;
 }
 
-#checkout_content .receipt .CUI input:-ms-input-placeholder,
-#checkout_content .receipt .CUI select:-ms-input-placeholder {
+#checkout_content .receipt_cui .CUI input:-ms-input-placeholder,
+#checkout_content .receipt_cui .CUI select:-ms-input-placeholder {
   color: #8da291;
   font-weight: 300;
 }
 
-#checkout_content .receipt .CUI input::-ms-input-placeholder,
-#checkout_content .receipt .CUI select::-ms-input-placeholder {
+#checkout_content .receipt_cui .CUI input::-ms-input-placeholder,
+#checkout_content .receipt_cui .CUI select::-ms-input-placeholder {
   color: #8da291;
   font-weight: 300;
 }
 
-#checkout_content .receipt .CUI input::placeholder,
-#checkout_content .receipt .CUI select::placeholder {
+#checkout_content .receipt_cui .CUI input::placeholder,
+#checkout_content .receipt_cui .CUI select::placeholder {
   color: #8da291;
   font-weight: 300;
+}
+
+#checkout_content .receipt_mail {
+  height: 555px;
+}
+
+#checkout_content .receipt_mail .for_mail {
+  margin: 0 auto;
+  width: 82.6%;
+  margin-bottom: 5px;
+}
+
+#checkout_content .receipt_mail .for_mail label {
+  width: 100%;
+  color: #eaf0ed;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#checkout_content .receipt_mail .for_mail input,
+#checkout_content .receipt_mail .for_mail select {
+  width: 100%;
+  height: 56px;
+  color: #8da291;
+  background-color: #eaf0ed;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#checkout_content .receipt_mail .for_mail input::-webkit-input-placeholder,
+#checkout_content .receipt_mail .for_mail select::-webkit-input-placeholder {
+  color: #8da291;
+  font-weight: 300;
+}
+
+#checkout_content .receipt_mail .for_mail input:-ms-input-placeholder,
+#checkout_content .receipt_mail .for_mail select:-ms-input-placeholder {
+  color: #8da291;
+  font-weight: 300;
+}
+
+#checkout_content .receipt_mail .for_mail input::-ms-input-placeholder,
+#checkout_content .receipt_mail .for_mail select::-ms-input-placeholder {
+  color: #8da291;
+  font-weight: 300;
+}
+
+#checkout_content .receipt_mail .for_mail input::placeholder,
+#checkout_content .receipt_mail .for_mail select::placeholder {
+  color: #8da291;
+  font-weight: 300;
+}
+
+#checkout_content .receipt_mail .for_mail .full_address {
+  margin-bottom: 10px;
+}
+
+#checkout_content .receipt_mail .for_mail .full_address select {
+  width: 186px;
+  margin-bottom: 8px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background-color: #eaf0ed;
+  background-image: url(../images/arrow_down.svg);
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+
+#checkout_content .receipt_mail .for_mail .full_address #country {
+  margin-right: 3px;
 }
 
 #checkout_content .order {

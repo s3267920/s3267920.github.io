@@ -343,7 +343,7 @@ header {
       display: inline-block;
       font-size: nth($font, 4);
       color: $whiteGreen;
-      margin: 35px 40px;
+      margin: 30px 40px;
       margin-right: 0;
       font-weight: 400;
     }
@@ -490,6 +490,10 @@ header {
   }
   //付款
   .payment {
+    h4 {
+      margin: 35px 40px;
+      margin-right: 0;
+    }
     .credit_card {
       @include checkout_style;
       #credit_num {
@@ -511,7 +515,10 @@ header {
   }
   // 發票
   .receipt {
-    height: 485px;
+    h4 {
+      margin: 35px 40px;
+      margin-right: 0;
+    }
     .receipt_btn {
       width: 82.6%;
       margin: 0 auto;
@@ -533,9 +540,31 @@ header {
         color: $darkGreen;
       }
     }
+  }
+  .receipt_cui {
+    height: 485px;
     .CUI {
       @include checkout_style;
       margin-bottom: 10px;
+    }
+  }
+  .receipt_mail {
+    height: 555px;
+    .for_mail {
+      @include checkout_style;
+      margin-bottom: 5px;
+      .full_address {
+        margin-bottom: 10px;
+        select {
+          width: 186px;
+          margin-bottom: 8px;
+          appearance: none;
+          @include addSelectImg;
+        }
+        #country {
+          margin-right: 3px;
+        }
+      }
     }
   }
   .order {
