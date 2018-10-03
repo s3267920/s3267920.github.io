@@ -18,6 +18,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="../style/all.css" />
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js'></script>
+  <script src="../js/tw-city-selector.min.js"></script>
   <script src="../js/main.js"></script>
 </head>
 
@@ -52,7 +53,91 @@
   </header>
   <div class="clearfix"></div>
 
+  <div id="checkout_content" class="cart_content">
+    <div class="shipping">
+      <h4>運送</h4>
+      <div class="step_mark">
+        <div class="step_box">
+          <input type="radio" name="step1" checked id="step1">
+          <label for="step1" class="step "></label>
+        </div>
+        <span></span>
+        <div class="step_box">
+          <input type="radio" name="step2" id="step2">
+          <label for="step2" class="step "></label>
+        </div>
+        <span></span>
+        <div class="step_box">
+          <input type="radio" name="step3" id="step3">
+          <label for="step3" class="step"></label>
+        </div>
+      </div>
+      <div class="personal_information">
+        <div class="name">
+          <label for="firstName">姓氏</label>
+          <label for="lastName">名字</label>
+          <input type="text" id="firstName" placeholder="王" required>
+          <input type="text" id="lastName" placeholder="小明" required>
+        </div>
+        <label for="phone">電話</label>
+        <input type="tel" id="phone" placeholder="0912-345-678">
+        <div class="full_address">
+          <label for="address">地址</label>
+          <select name="country" id="country" required>
+          </select>
+          <select name="area" id="area"></select>
+          <input type="text" id="address" placeholder="幸福路520號" required>
+        </div>
+        <script>
+          new TwCitySelector({
+            el: ".full_address",
+            elCounty: "#country",
+            elDistrict: "#area",
+            selectedCounty: "高雄市",
+            selectedDistrict: "新興區",
+          });
+        </script>
+      </div>
+      <a href="../html/checkout2.html"><input class="next" type="submit" value="下一步"></a>
+    </div>
+    <div class="order">
+      <div class="bill checkout_bill">
+        <h4>訂單摘要</h4>
+        <ul>
+          <li>小計<span class="subtotal ">NT$ 2,700</span></li>
+          <li>運費 <span class="shipping_rate ">NT$ 300</span></li>
+          <li class="total_title">總計<span class="total ">NT$ 3,000</span></li>
+        </ul>
+      </div>
+      <div class="order_list">
+        <h4>購物清單</h4>
+        <ul>
+          <li class="cart_list">
+            <div class="cart_list_img" style='background-image:url(../images/brenda-godinez-367708-unsplash.jpg)'></div>
+            <div class="cart_list_context">
+              <p>焦糖馬卡龍 （<span class="quantity">2</span>）</p>
 
+            </div>
+            <div class="price ">NT$ 900</div>
+          </li>
+          <li class="cart_list">
+            <div class="cart_list_img" style='background-image:url(../images/food-photographer-jennifer-pallian-650641-unsplash.jpg)'></div>
+            <div class="cart_list_context">
+              <p>初戀的滋味 （<span class="quantity">2</span>）</p>
+            </div>
+            <div class="price ">NT$ 900</div>
+          </li>
+          <li class="cart_list">
+            <div class="cart_list_img" style='background-image:url(../images/brooke-lark-96398-unsplash.jpg)'></div>
+            <div class="cart_list_context">
+              <p>野莓蘋果派 （<span class="quantity">2</span>）</p>
+            </div>
+            <div class="price ">NT$ 900</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div id="footer">
     <div class="subscribe">
@@ -80,5 +165,6 @@
     </div>
   </div>
 </body>
+
 
 </html>
