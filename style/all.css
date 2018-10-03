@@ -2045,6 +2045,10 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   margin-right: 3px;
 }
 
+#checkout_content .shipping a {
+  text-decoration: none;
+}
+
 #checkout_content .shipping .next {
   text-align: center;
   width: 100%;
@@ -2053,6 +2057,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   color: #3f5d45;
   font-size: 24px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 #checkout_content .payment h4 {
@@ -2366,5 +2371,165 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   font-size: 20px;
   font-weight: normal;
   line-height: 28px;
+}
+
+#success_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 460px;
+  background-image: url(../images/brooke-lark-385507-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+#success_content .success {
+  width: 94.79%;
+  margin: 0 auto;
+}
+
+#success_content .success .step_mark_done {
+  width: 190px;
+  margin-left: 0;
+  display: block;
+  margin: 0 auto;
+  margin-top: 130px;
+  height: 22px;
+  vertical-align: text-bottom;
+}
+
+#success_content .success .step_mark_done .step_box {
+  display: inline-block;
+  position: relative;
+}
+
+#success_content .success .step_mark_done .step_box input[type="radio"] {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+#success_content .success .step_mark_done .step_box input[type="radio"] + .step::after {
+  content: none;
+}
+
+#success_content .success .step_mark_done .step_box .step {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: -3px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #3f5d45;
+  border-radius: 50%;
+}
+
+#success_content .success .step_mark_done .step_box .step::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #3f5d45;
+  border-radius: 50%;
+  top: -1px;
+  left: -1px;
+  opacity: 0.5;
+}
+
+#success_content .success .step_mark_done .step_box .step::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background-color: #3f5d45;
+}
+
+#success_content .success .step_mark_done .step_box .finish {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: -3px;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #3f5d45;
+  border-radius: 50%;
+  background-color: #3f5d45;
+}
+
+#success_content .success .step_mark_done .step_box .finish::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #3f5d45;
+  border-radius: 50%;
+  top: -1px;
+  left: -1px;
+  opacity: 0.5;
+}
+
+#success_content .success .step_mark_done .step_box .finish::after {
+  position: absolute;
+  content: "";
+  z-index: 30;
+  display: inline-block;
+  height: 8px;
+  width: 13px;
+  left: 2px;
+  top: 3px;
+  border-left: 2px solid #eaf0ed;
+  border-bottom: 2px solid #eaf0ed;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#success_content .success .step_mark_done > span {
+  display: inline-block;
+  width: 34.2%;
+  vertical-align: middle;
+  border-top: 1px solid #3f5d45;
+  opacity: 0.5;
+}
+
+#success_content .success .succes_img {
+  width: 190px;
+  height: 46px;
+  background-image: url(../images/lg-付款成功.svg);
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+#success_content .success a {
+  text-decoration: none;
+}
+
+#success_content .success .go_home {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  height: 65px;
+  background-color: #ffe180;
+  color: #3f5d45;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#success_content .success .go_home:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 2px #3f5d45;
+          box-shadow: 0 0 2px #3f5d45;
 }
 /*# sourceMappingURL=all.css.map */
