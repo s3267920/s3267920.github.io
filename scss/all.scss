@@ -2,7 +2,7 @@
 @import "_style.scss";
 
 html {
-  font-family: $pftc, $HN, $times;
+  @include font_family;
   height: 100%;
 }
 body {

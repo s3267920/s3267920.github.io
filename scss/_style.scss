@@ -8,10 +8,6 @@ $lightGreen: #8da291;
 $darkGreenO: rgba(63, 93, 69, 0.8);
 $yellowO: rgba(255, 225, 128, 0.8);
 //font
-$pftc: PingFang TC;
-$HN: Helvetica Neue;
-$times: Times;
-
 $font: 16px 20px 24px 36px;
 
 //login頁用
@@ -67,4 +63,9 @@ $s-size: 16px;
 @mixin icon {
   width: 24px;
   height: 24px;
+}
+
+@mixin font_family {
+  font-family: PingFang TC, Helvetica Neue, Times, Microsoft JhengHei,
+    微軟正黑體;
 }
