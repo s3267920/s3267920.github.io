@@ -500,6 +500,34 @@ header {
     .order_list {
       height: 370px;
       margin-top: 20px;
+      .cart_list {
+        display: inline-flex;
+        align-items: center;
+        width: 262px;
+        height: 80px;
+        margin-bottom: 16px;
+        .cart_list_img {
+          display: inline-block;
+          width: 120px;
+          height: 80px;
+          background-size: cover;
+          background-position: center center;
+          margin-right: 20px;
+        }
+        .cart_list_context {
+          display: inline-block;
+          vertical-align: middle;
+          p {
+            display: inline-block;
+            width: 125px;
+          }
+          .price {
+            font-size: nth($font, 2);
+            font-weight: normal;
+            line-height: 28px;
+          }
+        }
+      }
     }
   }
 }

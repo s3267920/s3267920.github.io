@@ -1695,4 +1695,41 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   height: 370px;
   margin-top: 20px;
 }
+
+#checkout_content .order .order_list .cart_list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 262px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+#checkout_content .order .order_list .cart_list .cart_list_img {
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  background-size: cover;
+  background-position: center center;
+  margin-right: 20px;
+}
+
+#checkout_content .order .order_list .cart_list .cart_list_context {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#checkout_content .order .order_list .cart_list .cart_list_context p {
+  display: inline-block;
+  width: 125px;
+}
+
+#checkout_content .order .order_list .cart_list .cart_list_context .price {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 28px;
+}
 /*# sourceMappingURL=all.css.map */
