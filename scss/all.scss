@@ -186,7 +186,6 @@ header {
     p {
       float: left;
       line-height: 116px;
-      font-family: $HN;
       color: $whiteGreen;
       font-size: $l-size;
       font-weight: 300;
@@ -275,7 +274,6 @@ header {
         margin-top: 46px;
         line-height: 150%;
         color: $darkGreen;
-        font-family: $times;
         text-align: center;
       }
     }
@@ -338,7 +336,7 @@ header {
   height: 580px;
   .shipping {
     width: 48.936%;
-    height: 575px;
+    height: 570px;
     margin-right: 20px;
     background-color: $darkGreen;
     h4 {
@@ -452,9 +450,19 @@ header {
         }
       }
       .full_address {
+        margin-bottom: 20px;
         select {
-          width: 180px;
-          margin-bottom: 10px;
+          width: 186px;
+          margin-bottom: 8px;
+          appearance: none;
+          border-radius: 0;
+          background-color: $whiteGreen;
+          background-image: url(../images/arrow_down.svg);
+          background-position: 90% 50%;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+        }
+        #country {
           margin-right: 3px;
         }
       }
