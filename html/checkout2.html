@@ -38,7 +38,7 @@
       </div>
       <div class="cart">
         <a href="./cart.html">
-          <img class="cart-icon" src="../images/cart-icon.png" alt="cart">
+          <img class="cart-icon" src="../images/shopping_cart.svg" alt="cart">
         </a>
       </div>
       <nav class="nav">
@@ -52,7 +52,86 @@
   </header>
   <div class="clearfix"></div>
 
+  <div id="checkout_content" class="cart_content">
+    <div class="payment shipping">
+      <h4>付款</h4>
+      <div class="step_mark">
+        <div class="step_box">
+          <input type="radio" name="step1" id="step1">
+          <label for="step1" class="finish "></label>
+        </div>
+        <span></span>
+        <div class="step_box">
+          <input type="radio" name="step2" checked id="step2">
+          <label for="step2" class="step "></label>
+        </div>
+        <span></span>
+        <div class="step_box">
+          <input type="radio" name="step3" id="step3">
+          <label for="step3" class="step"></label>
+        </div>
+      </div>
+      <div class="credit_card ">
+        <label for="credit_num">信用卡卡號</label>
+        <input type="text" name="credit_num" id="credit_num" placeholder="9012-3456-7890-1234">
+        <div class="personal_name">
+          <label for="Name">姓名</label>
+          <input type="text" id="Name_first" placeholder="王" required>
+          <input type="text" id="Name_last" placeholder="小明" required>
+        </div>
+        <label>有效期限</label>
+        <select name="month" id="month" required>
+          <option value="month" disabled selected>月</option>
+        </select>
+        <select name="year" id="year">
+          <option value="year" class="year" disabled selected>年</option>
+        </select>
+        <label for="safe_num">背面末三碼</label>
+        <input type="text" id="safe_num" placeholder="123">
+      </div>
+      <a href="../html/checkout3-1.html"><input class="next" type="submit" value="下一步"></a>
+    </div>
+    <div class="order">
+      <div class="bill checkout_bill">
+        <h4>訂單摘要</h4>
+        <ul>
+          <li>小計<span class="subtotal ">NT$ 2,700</span></li>
+          <li>運費 <span class="shipping_rate ">NT$ 300</span></li>
+          <li class="total_title">總計<span class="total ">NT$ 3,000</span></li>
+        </ul>
+      </div>
+      <div class="bill order_list">
+        <h4>購物清單</h4>
+        <ul>
+          <li class="cart_list">
+            <div class="cart_list_img" style='background-image:url(../images/brenda-godinez-367708-unsplash.jpg)'></div>
+            <div class="cart_list_context">
+              <p>焦糖馬卡龍（<span class="quantity">2</span>）</p>
+              <div class="price ">NT$ 900</div>
+            </div>
 
+          </li>
+          <li class="cart_list">
+            <div class="cart_list_img" style='background-image:url(../images/food-photographer-jennifer-pallian-650641-unsplash.jpg)'></div>
+            <div class="cart_list_context">
+              <p>初戀的滋味（<span class="quantity">2</span>）</p>
+              <div class="price ">NT$ 900</div>
+
+            </div>
+
+          </li>
+          <li class="cart_list">
+            <div class="cart_list_img" style='background-image:url(../images/brooke-lark-96398-unsplash.jpg)'></div>
+            <div class="cart_list_context">
+              <p>野莓蘋果派（<span class="quantity">2</span>）</p>
+              <div class="price ">NT$ 900</div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div id="footer">
     <div class="subscribe">

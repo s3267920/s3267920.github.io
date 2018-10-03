@@ -69,3 +69,37 @@ $s-size: 16px;
   font-family: PingFang TC, Helvetica Neue, Times, Microsoft JhengHei,
     微軟正黑體;
 }
+
+@mixin checkout_style {
+  margin: 0 auto;
+  width: 82.6%;
+  label {
+    width: 100%;
+    color: $whiteGreen;
+    font-size: nth($font, 2);
+    margin-bottom: 10px;
+  }
+  input,
+  select {
+    width: 100%;
+    height: 56px;
+    color: $lightGreen;
+    background-color: $whiteGreen;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: nth($font, 1);
+    &::placeholder {
+      color: $lightGreen;
+      font-weight: 300;
+    }
+  }
+}
+
+@mixin addSelectImg {
+  border-radius: 0;
+  background-color: $whiteGreen;
+  background-image: url(../images/arrow_down.svg);
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
