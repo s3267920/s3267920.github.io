@@ -1842,12 +1842,13 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   display: inline-block;
   font-size: 36px;
   color: #eaf0ed;
-  margin: 30px 40px;
+  margin: 35px 40px;
   margin-right: 0;
   font-weight: 400;
 }
 
 #checkout_content .shipping .step_mark {
+  width: 190px;
   display: inline-block;
   margin-left: 25%;
   height: 22px;
@@ -1874,7 +1875,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 #checkout_content .shipping .step_mark .step_box #step3 {
-  margin-right: 40px;
+  margin-right: 8.7%;
 }
 
 #checkout_content .shipping .step_mark .step_box .step {
@@ -1955,7 +1956,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 #checkout_content .shipping .step_mark > span {
   display: inline-block;
-  width: 65px;
+  width: 34.2%;
   vertical-align: middle;
   border-top: 1px solid #eaf0ed;
   opacity: 0.5;
@@ -2045,6 +2046,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 #checkout_content .shipping .next {
+  text-align: center;
   width: 100%;
   height: 65px;
   background-color: #ffe180;
@@ -2128,6 +2130,84 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   background-position: 90% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
+}
+
+#checkout_content .receipt {
+  height: 485px;
+}
+
+#checkout_content .receipt .receipt_btn {
+  width: 82.6%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+#checkout_content .receipt .receipt_btn input[type="button"] {
+  width: 50%;
+  height: 56px;
+  background-color: #3f5d45;
+  color: #eaf0ed;
+  border: 1px solid #eaf0ed;
+  font-size: 20px;
+}
+
+#checkout_content .receipt .receipt_btn input[type="button"]:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 2px #eaf0ed;
+          box-shadow: 0 0 2px #eaf0ed;
+}
+
+#checkout_content .receipt .receipt_btn input[checked] {
+  background-color: #eaf0ed;
+  color: #3f5d45;
+}
+
+#checkout_content .receipt .CUI {
+  margin: 0 auto;
+  width: 82.6%;
+  margin-bottom: 10px;
+}
+
+#checkout_content .receipt .CUI label {
+  width: 100%;
+  color: #eaf0ed;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#checkout_content .receipt .CUI input,
+#checkout_content .receipt .CUI select {
+  width: 100%;
+  height: 56px;
+  color: #8da291;
+  background-color: #eaf0ed;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#checkout_content .receipt .CUI input::-webkit-input-placeholder,
+#checkout_content .receipt .CUI select::-webkit-input-placeholder {
+  color: #8da291;
+  font-weight: 300;
+}
+
+#checkout_content .receipt .CUI input:-ms-input-placeholder,
+#checkout_content .receipt .CUI select:-ms-input-placeholder {
+  color: #8da291;
+  font-weight: 300;
+}
+
+#checkout_content .receipt .CUI input::-ms-input-placeholder,
+#checkout_content .receipt .CUI select::-ms-input-placeholder {
+  color: #8da291;
+  font-weight: 300;
+}
+
+#checkout_content .receipt .CUI input::placeholder,
+#checkout_content .receipt .CUI select::placeholder {
+  color: #8da291;
+  font-weight: 300;
 }
 
 #checkout_content .order {
