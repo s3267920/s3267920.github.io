@@ -49,7 +49,7 @@
     }
     .popular::before {
       @include blur;
-      background-image: url(/images/whitney-wright-356670-unsplash.jpg);
+      background-image: url(../images/whitney-wright-356670-unsplash.jpg);
     }
     .new-product::before {
       @include blur;

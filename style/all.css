@@ -586,7 +586,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   -webkit-filter: blur(6px);
           filter: blur(6px);
   z-index: -1;
-  background-image: url(/images/whitney-wright-356670-unsplash.jpg);
+  background-image: url(../images/whitney-wright-356670-unsplash.jpg);
 }
 
 .banner-card ul .new-product::before {
