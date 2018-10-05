@@ -66,8 +66,8 @@ $s-size: 16px;
 }
 
 @mixin font_family {
-  font-family: PingFang TC, Helvetica Neue, Times, Microsoft JhengHei,
-    微軟正黑體;
+  font-family: "PingFang", "Helvetica Neue", times, "Microsoft JhengHei",
+    "微軟正黑體";
 }
 
 @mixin checkout_style {
@@ -102,4 +102,11 @@ $s-size: 16px;
   background-position: 90% 50%;
   background-repeat: no-repeat;
   background-attachment: scroll;
+}
+
+@mixin btnFocus {
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px $darkGreen;
+  }
 }
