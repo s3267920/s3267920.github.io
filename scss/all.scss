@@ -14,33 +14,35 @@ body {
   }
 }
 header {
-  @media screen and (max-width: 375px) {
-    position: relative;
-  }
+  width: 100%;
   .nav-bar {
-    margin: 30px 42px 23px 42px;
-    @media screen and (max-width: 375px) {
-      margin: 33px;
-      margin-bottom: 10px;
+    display: inline-flex;
+    width: 91.79%;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 4.1%;
+    @media screen and (max-width: 700px) {
+      margin: 0;
+      width: 100%;
     }
     //漢堡選單
     .hamburger-icon {
-      position: absolute;
+      position: relative;
       height: 24px;
       width: 24px;
       display: none;
-      @media screen and (max-width: 375px) {
-        display: inline-block;
+      @media screen and (max-width: 600px) {
+        margin-left: 30px;
+        display: inline-flex;
       }
       .icon-box {
         display: inline-block;
         position: absolute;
-        top: 0;
+        top: 12.5%;
         right: 0;
         bottom: 0;
         left: 0;
         height: 12px;
-        margin: 4px 0;
         .icon-bar {
           width: 18px;
           height: 2px;
@@ -51,8 +53,8 @@ header {
       }
     }
     .logo {
-      display: inline-block;
-      margin-top: -10px;
+      display: inline-flex;
+      flex: 1;
       a {
         background-image: url(../images/logo-all-dark.svg);
         background-repeat: no-repeat;
@@ -67,50 +69,58 @@ header {
       // a:active {
       //   background-image: url(../images/logo-light.svg);
       // }
-      @media screen and (max-width: 375px) {
-        margin: 0;
-        margin-top: -5px;
+      @media screen and (max-width: 700px) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
         h1 {
-          margin-left: 80px;
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: 425px) {
+        h1 {
           a {
             background-image: url(../images/logotype-sm-dark.svg);
             width: 144px;
-            height: 40px;
+            height: 25px;
           }
         }
       }
     }
     .cart {
-      float: right;
+      display: inline-flex;
       margin-right: -40px;
+      order: 10;
       a {
         padding: 40px;
         padding-top: 39px;
         .cart-icon {
-          margin-top: -5px;
           vertical-align: middle;
           width: 24px;
           height: 24px;
         }
       }
-      @media screen and (max-width: 375px) {
-        float: none;
-        margin: 0;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        vertical-align: middle;
+      @media screen and (max-width: 700px) {
+        a {
+          padding: 30px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        order: 5;
+        margin-right: 0px;
         a {
           padding: 30px;
         }
       }
     }
     .nav {
-      float: right;
+      display: inline-flex;
+      order: 5;
       .nav-menu {
-        display: inline-block;
+        display: inline-flex;
+        align-items: flex-end;
         li {
-          float: left;
+          display: inline-flex;
           a {
             text-decoration: none;
             color: $darkGreen;
@@ -123,24 +133,58 @@ header {
           }
         }
       }
-      @media screen and (max-width: 375px) {
-        float: none;
+      @media screen and (max-width: 600px) {
+        display: none;
+        flex-direction: column;
+        width: 100%;
         .nav-menu {
-          display: none;
+          display: flex;
+          width: 100%;
+          justify-content: center;
           text-align: center;
           li {
-            float: none;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: nowrap;
             a {
-              display: block;
-              text-decoration: none;
-              color: $darkGreen;
+              display: flex;
               font-size: $m-size;
-              font-weight: 500;
               padding: 20px 40px;
             }
             a:hover,
             a:active {
               background-color: $whiteGreen;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 425px) {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        .nav-menu {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          li {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: nowrap;
+            a {
+              width: 100%;
+              justify-content: center;
+              display: flex;
+              font-size: $m-size;
+              padding: 20px 40px;
+            }
+            a:hover,
+            a:active {
+              background-color: $whiteGreen;
+              border-bottom: none;
             }
           }
         }
@@ -151,7 +195,7 @@ header {
 .banner {
   background-image: url(../images/toa-heftiba-470545-unsplash.jpg);
   background-size: cover;
-  background-position-y: -60px;
+  background-position: center center;
   background-repeat: no-repeat;
   width: 91.79%;
   height: 496px;
@@ -161,10 +205,17 @@ header {
     float: right;
     margin: 40px;
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 769px) {
     width: 100%;
-    background-position: 100% center;
-    height: 277px;
+    height: 0px;
+    padding: 30% 0;
+    background-size: 100% 50%;
+  }
+  @media screen and (max-width: 425px) {
+    width: 100%;
+    height: 0px;
+    padding: 40% 0;
+    background-size: 50% 25%;
     img {
       width: 59px;
       margin: 30px 30px 0 0;
@@ -177,26 +228,31 @@ header {
 #footer {
   height: 42%;
   .subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: $darkGreen;
     img {
-      float: left;
+      display: inline-flex;
       width: 40px;
-      margin: 38px 2% 38px 12%;
+      margin: 38px 2% 38px 5%;
+      &.logo_icon {
+        height: 40px;
+      }
     }
     p {
-      float: left;
       line-height: 116px;
       color: $whiteGreen;
       font-size: $l-size;
       font-weight: 300;
     }
     .email-box {
-      display: inline-block;
+      display: inline-flex;
       position: relative;
       background-color: $whiteGreen;
       width: 37.1%;
       height: 56px;
-      margin: 30px 0 30px 12%;
+      margin: 30px 5% 30px 12%;
       .email-icon {
         margin: 0;
         margin: 16px 0px 16px 20px;
@@ -226,7 +282,7 @@ header {
       //改變點擊後框的顏色
       .email:focus {
         border: none;
-        box-shadow: 0 0 1px $lightGreen;
+        box-shadow: none;
         outline: none;
       }
       .arrow {
@@ -239,13 +295,14 @@ header {
     }
   }
   .information {
+    display: flex;
     position: relative;
     height: 341px;
+    width: 100%;
     background-color: $whiteGreen;
-    white-space: nowrap;
     .information-left {
-      float: left;
-      margin-left: 130px;
+      flex-direction: column;
+      margin-left: 12.69%;
       .info-img {
         height: 27px;
         margin-top: 40px;
@@ -256,63 +313,95 @@ header {
         color: $darkGreen;
       }
       .info-icon {
-        margin-top: 30px;
-        width: 32px;
+        img {
+          margin-top: 30px;
+          width: 32px;
+        }
       }
     }
     .information-right {
       position: absolute;
-      right: 12%;
+      right: 0;
+      margin-right: 11.8%;
+      flex-direction: column;
       padding-top: 30px;
       .info-slogan {
-        display: inline-block;
+        display: inline-flex;
+        background-image: url(../images/sm-今天是個吃甜點的好日子.svg);
+        background-position: center;
         width: 60px;
+        height: 218px;
         margin: 0px;
-        margin-left: 200px;
+        margin-left: 79%;
       }
       .info-text {
         margin-top: 46px;
         line-height: 150%;
         color: $darkGreen;
-        text-align: center;
+        text-align: right;
       }
     }
   }
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 754px) {
     .subscribe {
-      img {
-        margin: 33px 5% 33px 13%;
-      }
       .email-box {
-        width: 315px;
-        margin: 0px 0 30px 30px;
+        width: 40%;
+        margin: 30px 5% 30px 12%;
+      }
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .subscribe {
+      .email-box {
+        width: 50%;
+        margin: 30px 5% 30px 12%;
       }
     }
     .information {
-      position: relative;
-      height: 311px;
-      background-color: $whiteGreen;
-      white-space: nowrap;
+      justify-content: center;
+      flex-direction: column;
       .information-left {
-        float: left;
-        margin-left: 30px;
+        flex-direction: column;
+        margin-left: 12.69%;
         .info-img {
           height: 27px;
           margin-top: 40px;
           margin-bottom: 40px;
         }
+        .info-text {
+          line-height: 150%;
+          color: $darkGreen;
+        }
+        .info-icon {
+          img {
+            margin-top: 30px;
+            width: 32px;
+          }
+        }
       }
       .information-right {
-        position: absolute;
-        bottom: 30px;
-        left: -10px;
-        padding-top: 0px;
+        display: flex;
+        position: static;
+        margin-top: 20px;
+        padding-top: 0;
+        margin-left: 12.69%;
         .info-slogan {
           display: none;
         }
         .info-text {
-          margin-top: 0px;
+          justify-content: left;
+          display: inline-flex;
+          margin-top: 0;
         }
+      }
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .subscribe {
+      .email-box {
+        width: 75%;
+        margin: 0 auto;
+        margin-bottom: 30px;
       }
     }
   }
@@ -328,441 +417,3 @@ header {
 @import "_cart.scss";
 // 結帳頁
 @import "_checkout1.scss";
-
-#checkout_content {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-  height: 580px;
-  .shipping {
-    width: 48.936%;
-    height: 570px;
-    margin-right: 20px;
-    background-color: $darkGreen;
-    h4 {
-      display: inline-block;
-      font-size: nth($font, 4);
-      color: $whiteGreen;
-      margin: 30px 40px;
-      margin-right: 0;
-      font-weight: 400;
-    }
-    .step_mark {
-      width: 190px;
-      display: inline-block;
-      margin-left: 25%;
-      height: 22px;
-      vertical-align: text-bottom;
-      .step_box {
-        display: inline-block;
-        position: relative;
-        input[type="radio"] {
-          position: relative;
-          z-index: 1;
-          opacity: 0;
-          + .step::after {
-            content: none;
-          }
-        }
-        input[checked] + .step::after {
-          content: "";
-        }
-        #step3 {
-          margin-right: 8.7%;
-        }
-        .step {
-          position: absolute;
-          z-index: 10;
-          top: 0;
-          left: -3px;
-          height: 20px;
-          width: 20px;
-          border: 1px solid $whiteGreen;
-          border-radius: 50%;
-          &::before {
-            position: absolute;
-            content: "";
-            display: inline-block;
-            height: 20px;
-            width: 20px;
-            border: 1px solid $whiteGreen;
-            border-radius: 50%;
-            top: -1px;
-            left: -1px;
-            opacity: 0.5;
-          }
-          //圓心
-          &::after {
-            position: absolute;
-            content: "";
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            top: 2px;
-            left: 2px;
-            border-radius: 50%;
-            background-color: $whiteGreen;
-          }
-        }
-        .finish {
-          position: absolute;
-          z-index: 10;
-          top: 0;
-          left: -3px;
-          height: 20px;
-          width: 20px;
-          border: 1px solid $whiteGreen;
-          border-radius: 50%;
-          background-color: $whiteGreen;
-          &::before {
-            position: absolute;
-            content: "";
-            display: inline-block;
-            height: 20px;
-            width: 20px;
-            border: 1px solid $whiteGreen;
-            border-radius: 50%;
-            top: -1px;
-            left: -1px;
-            opacity: 0.5;
-          }
-          //打勾
-          &::after {
-            position: absolute;
-            content: "";
-            z-index: 30;
-            display: inline-block;
-            height: 8px;
-            width: 13px;
-            left: 2px;
-            top: 3px;
-            border-left: 2px solid $darkGreen;
-            border-bottom: 2px solid $darkGreen;
-            transform: rotate(-45deg);
-          }
-        }
-      }
-      > span {
-        display: inline-block;
-        width: 34.2%;
-        vertical-align: middle;
-        border-top: 1px solid $whiteGreen;
-        opacity: 0.5;
-      }
-    }
-    .personal_information {
-      @include checkout_style;
-      .name {
-        label {
-          display: inline-block;
-          width: 186px;
-          margin-bottom: 10px;
-        }
-        input {
-          width: 186px;
-        }
-        #firstName {
-          margin-right: 3px;
-        }
-      }
-      .full_address {
-        margin-bottom: 20px;
-        select {
-          width: 186px;
-          margin-bottom: 8px;
-          appearance: none;
-          @include addSelectImg;
-        }
-        #country {
-          margin-right: 3px;
-        }
-      }
-    }
-    a {
-      text-decoration: none;
-    }
-    .next {
-      text-align: center;
-      width: 100%;
-      height: 65px;
-      background-color: $yellow;
-      color: $darkGreen;
-      font-size: nth($font, 3);
-      font-weight: 600;
-      cursor: pointer;
-    }
-  }
-  //付款
-  .payment {
-    h4 {
-      margin: 35px 40px;
-      margin-right: 0;
-    }
-    .credit_card {
-      @include checkout_style;
-      #credit_num {
-        width: 100%;
-        @include addSelectImg;
-        background-image: url(../images/payment.svg);
-        background-position: 95% 50%;
-      }
-      input {
-        width: 186px;
-      }
-      select {
-        width: 186px;
-        margin-bottom: 8px;
-        appearance: none;
-        @include addSelectImg;
-      }
-    }
-  }
-  // 發票
-  .receipt {
-    h4 {
-      margin: 35px 40px;
-      margin-right: 0;
-    }
-    .receipt_btn {
-      width: 82.6%;
-      margin: 0 auto;
-      margin-bottom: 30px;
-      input[type="button"] {
-        width: 50%;
-        height: 56px;
-        background-color: $darkGreen;
-        color: $whiteGreen;
-        border: 1px solid $whiteGreen;
-        font-size: nth($font, 2);
-        &:focus {
-          outline: none;
-          box-shadow: 0 0 2px $whiteGreen;
-        }
-      }
-      input[checked] {
-        background-color: $whiteGreen;
-        color: $darkGreen;
-      }
-    }
-  }
-  .receipt_cui {
-    height: 485px;
-    .CUI {
-      @include checkout_style;
-      margin-bottom: 10px;
-    }
-  }
-  .receipt_mail {
-    height: 555px;
-    .for_mail {
-      @include checkout_style;
-      margin-bottom: 5px;
-      .full_address {
-        margin-bottom: 10px;
-        select {
-          width: 186px;
-          margin-bottom: 8px;
-          appearance: none;
-          @include addSelectImg;
-        }
-        #country {
-          margin-right: 3px;
-        }
-      }
-    }
-  }
-  .order {
-    display: flex;
-    flex-direction: column;
-    .order_list,
-    .checkout_bill {
-      background-color: #fff;
-      border: 1px solid $whiteGreen;
-      display: inline-block;
-      height: 195px;
-      h4 {
-        background-color: $whiteGreen;
-        color: $lightGreen;
-        font-weight: 400;
-        margin: 0 auto;
-        padding: 16px 0;
-      }
-      li {
-        color: $lightGreen;
-      }
-    }
-    .order_list {
-      height: 370px;
-      margin-top: 20px;
-      .cart_list {
-        display: inline-flex;
-        align-items: center;
-        width: 262px;
-        height: 80px;
-        margin-bottom: 16px;
-        .cart_list_img {
-          display: inline-block;
-          width: 120px;
-          height: 80px;
-          background-size: cover;
-          background-position: center center;
-          margin-right: 20px;
-        }
-        .cart_list_context {
-          display: inline-block;
-          vertical-align: middle;
-          p {
-            display: inline-block;
-            width: 125px;
-          }
-          .price {
-            font-size: nth($font, 2);
-            font-weight: normal;
-            line-height: 28px;
-          }
-        }
-      }
-    }
-  }
-
-  //成功頁
-}
-#success_content {
-  display: flex;
-  justify-content: center;
-  height: 460px;
-  background-image: url(../images/brooke-lark-385507-unsplash.jpg);
-  background-position: center center;
-  background-size: cover;
-  margin-bottom: 60px;
-  .success {
-    width: 94.79%;
-    margin: 0 auto;
-    .step_mark_done {
-      width: 190px;
-      margin-left: 0;
-      display: block;
-      margin: 0 auto;
-      margin-top: 130px;
-      height: 22px;
-      vertical-align: text-bottom;
-      .step_box {
-        display: inline-block;
-        position: relative;
-        input[type="radio"] {
-          position: relative;
-          z-index: 1;
-          opacity: 0;
-          + .step::after {
-            content: none;
-          }
-        }
-        .step {
-          position: absolute;
-          z-index: 10;
-          top: 0;
-          left: -3px;
-          height: 20px;
-          width: 20px;
-          border: 1px solid $darkGreen;
-          border-radius: 50%;
-          &::before {
-            position: absolute;
-            content: "";
-            display: inline-block;
-            height: 20px;
-            width: 20px;
-            border: 1px solid $darkGreen;
-            border-radius: 50%;
-            top: -1px;
-            left: -1px;
-            opacity: 0.5;
-          }
-          //圓心
-          &::after {
-            position: absolute;
-            content: "";
-            display: inline-block;
-            width: 14px;
-            height: 14px;
-            top: 2px;
-            left: 2px;
-            border-radius: 50%;
-            background-color: $darkGreen;
-          }
-        }
-        .finish {
-          position: absolute;
-          z-index: 10;
-          top: 0;
-          left: -3px;
-          height: 20px;
-          width: 20px;
-          border: 1px solid $darkGreen;
-          border-radius: 50%;
-          background-color: $darkGreen;
-          &::before {
-            position: absolute;
-            content: "";
-            display: inline-block;
-            height: 20px;
-            width: 20px;
-            border: 1px solid $darkGreen;
-            border-radius: 50%;
-            top: -1px;
-            left: -1px;
-            opacity: 0.5;
-          }
-          //打勾
-          &::after {
-            position: absolute;
-            content: "";
-            z-index: 30;
-            display: inline-block;
-            height: 8px;
-            width: 13px;
-            left: 2px;
-            top: 3px;
-            border-left: 2px solid $whiteGreen;
-            border-bottom: 2px solid $whiteGreen;
-            transform: rotate(-45deg);
-          }
-        }
-      }
-      > span {
-        display: inline-block;
-        width: 34.2%;
-        vertical-align: middle;
-        border-top: 1px solid $darkGreen;
-        opacity: 0.5;
-      }
-    }
-    .succes_img {
-      width: 190px;
-      height: 46px;
-      background-image: url(../images/lg-付款成功.svg);
-      margin: 0 auto;
-      margin-top: 30px;
-      margin-bottom: 50px;
-    }
-    a {
-      text-decoration: none;
-    }
-    .go_home {
-      display: block;
-      margin: 0 auto;
-      width: 300px;
-      text-align: center;
-      cursor: pointer;
-      height: 65px;
-      background-color: $yellow;
-      color: $darkGreen;
-      font-size: nth($font, 3);
-      font-weight: 600;
-      &:focus {
-        outline: none;
-        box-shadow: 0 0 2px $darkGreen;
-      }
-    }
-  }
-}

@@ -4,34 +4,45 @@
   background-position-y: center;
 }
 .banner-card {
+  position: relative;
+  width: 100%;
+  height: 256px;
+  margin-bottom: -10%;
   ul {
-    width: 780px;
+    max-width: 800px;
     display: flex;
     white-space: nowrap;
+    align-items: center;
     position: absolute;
-    justify-content: center;
     font-size: 0;
-    bottom: -7%;
-    margin-left: 9%;
+    bottom: 33%;
+    left: 10%;
+    right: 10%;
+    margin: 0 auto;
     li {
-      max-width: 33.3%;
+      width: 33.3%;
+      height: 32.9%;
       position: relative;
       z-index: 1;
       overflow: hidden;
       .background-box {
+        width: 100%;
         background: $darkGreenO;
         display: inline-block;
         a {
           line-height: 25px;
           text-align: center;
           display: inline-block;
-          padding: 4.5vw 8.5vw;
+          padding: 25% 45.5%;
           color: $white;
-          font-size: $l-size;
+          font-size: nth($font, 3);
           letter-spacing: 8px;
           font-weight: 100;
           writing-mode: vertical-lr;
           text-decoration: none;
+          @media screen and (max-width: 425px) {
+            font-size: nth($font, 2);
+          }
         }
       }
       .background-box:hover {
@@ -60,12 +71,29 @@
       border-left: 2px solid #fff;
     }
   }
+  @media screen and (max-width: 769px) {
+    margin-bottom: 0%;
+    height: 0;
+    padding: 15% 0;
+    ul {
+      bottom: 1%;
+      left: 0%;
+      right: 0%;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    margin-bottom: 0%;
+    height: 0;
+    padding: 20% 0;
+
+    ul {
+      bottom: -7%;
+    }
+  }
 }
 #content {
-  margin-top: 250px;
   ul {
     margin-top: 60px;
-    margin-bottom: 50px;
     li {
       margin-top: 105px;
       .context {
@@ -75,14 +103,16 @@
         .text-right {
           .image-left {
             @include image;
-            left: 40px;
+            left: 0px;
+            margin-right: 3.9%;
+            margin-left: 4.1%;
             background-image: url(../images/le-buzz-576478-unsplash.jpg);
           }
           h2 {
             background-image: url(../images/lg-為什麼選擇了做甜點.svg);
             background-repeat: no-repeat;
             height: 307px;
-            margin-right: 40px;
+            margin-right: 3.9%;
             position: absolute;
             top: -20px;
             right: 0px;
@@ -91,9 +121,10 @@
           p {
             writing-mode: vertical-rl;
             position: absolute;
-            right: 210px;
+            right: 0px;
             line-height: 200%;
             margin: 70px 0;
+            margin-right: 18.5%;
             color: $lightGreen;
             font-weight: lighter;
           }
@@ -101,43 +132,51 @@
         .text-left {
           .image-right {
             @include image;
-            right: 40px;
+            right: 0px;
+            margin-right: 4.1%;
+            margin-left: 3.9%;
             background-image: url(../images/monika-grabkowska-325047-unsplash.jpg);
           }
           h2 {
             background-image: url(../images/lg-為什麼一定要吃甜點.svg);
             background-repeat: no-repeat;
             height: 307px;
-            margin-right: 40px;
             position: absolute;
             top: -25px;
-            left: 390px;
+            left: 38.1%;
             width: 88px;
           }
           p {
             writing-mode: vertical-rl;
             position: absolute;
-            left: 55px;
+            left: 0px;
             line-height: 200%;
             margin: 70px 0;
+            margin-left: 5.4%;
             color: $lightGreen;
             font-weight: lighter;
           }
         }
       }
       .only-word {
-        display: block;
+        background-image: url(../images/lg-想吃甜點是不需要理由的.svg);
+        background-repeat: no-repeat;
+        height: 460px;
         width: 90px;
         margin: 0 auto;
-        margin-top: -10px;
+        margin-bottom: -15%;
       }
       .product {
         ul {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
           margin: 30px 30px 60px 30px;
           li {
-            float: left;
+            display: inline-flex;
+            flex-direction: column;
             margin: 0px 10px;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
             .product-box {
               position: relative;
               .product-box-img {
@@ -198,6 +237,126 @@
               font-weight: bold;
               padding: 16px 89px;
               cursor: pointer;
+              @include btnFocus;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 769px) {
+      li {
+        .context {
+          .text-left {
+            .image-right {
+              margin-right: 0%;
+            }
+            p {
+              margin-left: 3.9%;
+            }
+          }
+          .text-right {
+            .image-left {
+              margin-left: 0%;
+            }
+            p {
+              margin-right: 16%;
+            }
+          }
+        }
+        .product {
+          ul {
+            margin: 0 7.5%;
+            li {
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 754px) {
+      li {
+        margin-top: 0px;
+        .context {
+          background-color: #fff;
+          height: 100%;
+          .text-left,
+          .text-right {
+            .image-left,
+            .image-right {
+              display: block;
+              position: static;
+              background-repeat: no-repeat;
+              width: 100%;
+              height: 0px;
+              padding: 33.3% 0;
+              margin: 0;
+              background-size: cover;
+              background-position: center center;
+            }
+            h2 {
+              height: 0;
+              padding: 12.5% 0;
+              margin: 0% auto;
+              position: static;
+              width: 50%;
+            }
+            p {
+              writing-mode: horizontal-tb;
+              width: 91.8%;
+              position: static;
+              line-height: 200%;
+              margin: 0 auto;
+              padding: 30px 4.1%;
+              color: $lightGreen;
+              font-weight: lighter;
+              background-color: $whiteGreen;
+            }
+          }
+          .text-right {
+            h2 {
+              background-image: url(../images/sm-為什麼選擇了做甜點.svg);
+            }
+          }
+          .text-left {
+            h2 {
+              background-image: url(../images/sm-為什麼一定要吃甜點.svg);
+              margin-top: 12.5%;
+            }
+          }
+        }
+        .only-word {
+          background-image: url(../images/sm-想吃甜點是不需要理由的.svg);
+          height: 0;
+          padding: 12.5% 0;
+          margin: 0% auto;
+          margin-top: 10%;
+          position: static;
+          width: 50%;
+        }
+        .product {
+          ul {
+            width: 100%;
+            margin: 0;
+            align-items: center;
+
+            li {
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 754px) {
+      li {
+        .product {
+          ul {
+            width: 100%;
+            margin: 0;
+            align-items: center;
+
+            li {
+              display: none;
+              &:first-child {
+                display: inline-flex;
+              }
             }
           }
         }
