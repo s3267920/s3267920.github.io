@@ -100,7 +100,8 @@ header {
           height: 24px;
         }
       }
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 769px) {
+        margin-right: 0px;
         a {
           padding: 30px;
         }
@@ -193,18 +194,13 @@ header {
   }
 }
 .banner {
-  background-image: url(../images/toa-heftiba-470545-unsplash.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   width: 91.79%;
   height: 496px;
   margin: 0 auto;
-  img {
-    width: 9.4%;
-    float: right;
-    margin: 40px;
-  }
+
   @media screen and (max-width: 769px) {
     width: 100%;
     height: 0px;
@@ -216,10 +212,6 @@ header {
     height: 0px;
     padding: 40% 0;
     background-size: 50% 25%;
-    img {
-      width: 59px;
-      margin: 30px 30px 0 0;
-    }
   }
 }
 .clearfix {

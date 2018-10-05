@@ -1,54 +1,64 @@
+.product_banner {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  background-image: url(../images/toa-heftiba-470545-unsplash.jpg);
+  background-size: cover;
+  background-position: center center;
+  img {
+    display: inline-flex;
+    width: 9.4%;
+    margin: 40px;
+  }
+  @media screen and (max-width: 769px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 25% 0;
+    background-size: 100%;
+    img {
+      display: inline-flex;
+      width: 9.4%;
+      margin-right: 40px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    img {
+      display: inline-flex;
+      width: 9.4%;
+      margin: 40px;
+    }
+  }
+}
+
 #product-content {
-  margin: 60px 42px;
-  @media screen and (max-width: 375px) {
+  margin: 60px 4.1%;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 425px) {
     margin: 0;
   }
-  .item-list {
-    ul {
-      float: left;
-      padding-bottom: 40px;
-      li {
-        width: 300px;
-        font-size: $l-size;
-        color: $darkGreen;
-        text-align: center;
-        a {
-          border: 1px solid $whiteGreen;
-          border-top: none;
-          display: inline-block;
-          text-decoration: none;
-          color: $darkGreen;
-          font-weight: 500;
-          padding: 20px 60px;
-          width: 300px;
-        }
-        a:hover,
-        a:active {
-          background-color: $lightGreen;
-          border: none;
-        }
-      }
-      .check {
-        background-color: $whiteGreen;
-      }
-      .list-title {
-        border: none;
-        padding: 20px 65px;
-        background-color: $darkGreen;
-        color: #fff;
-      }
-    }
-    @media screen and (max-width: 375px) {
+  .content_top {
+    display: flex;
+    flex-direction: row;
+    .item-list {
+      display: inline-flex;
       ul {
-        float: none;
-        padding-bottom: 0;
+        padding-bottom: 40px;
         li {
-          width: auto;
+          width: 300px;
+          font-size: nth($font, 3);
+          color: $darkGreen;
+          text-align: center;
           a {
-            border: none;
-            border-bottom: 1px solid $whiteGreen;
-            display: block;
-            width: auto;
+            border: 1px solid $whiteGreen;
+            border-top: none;
+            display: inline-block;
+            text-decoration: none;
+            color: $darkGreen;
+            font-weight: 500;
+            padding: 20px 60px;
+            width: 300px;
           }
           a:hover,
           a:active {
@@ -67,99 +77,43 @@
         }
       }
     }
-  }
-  .desert-item {
-    ul {
-      display: inline-block;
-      max-width: 640px;
-      height: auto;
-      li {
-        display: inline-block;
-        margin: 0 -4px 20px 20px;
-        width: 300px;
-        .product-box {
-          position: relative;
-          .product-box-img {
-            width: 300px;
-            height: 315px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-          }
-          .today-box {
-            position: absolute;
-            left: 20px;
-            background-color: $darkGreen;
-            color: $white;
-            padding: 10px;
-            writing-mode: vertical-lr;
-            letter-spacing: 5px;
-            font-weight: 300;
-          }
-          .like {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 25px;
-          }
-        }
-        .product-box-item {
-          width: 300px;
-          height: 56px;
-          .product-box-dollar,
-          .product-box-name {
-            height: 56px;
-            font-size: $m-size;
-            float: left;
-            color: $darkGreen;
-            border: 1px solid $whiteGreen;
-          }
-          .product-box-name {
-            width: 173px;
-            border-right: none;
-            font-weight: 300;
-            padding: 15px 33px 15px 33px;
-          }
-          .product-box-dollar {
-            width: 127px;
-            font-weight: 500;
-            padding: 15px 20px 15px 25px;
-          }
-        }
-        .add-btn {
-          clear: both;
-          display: block;
-          font-size: $l-size;
-          color: $darkGreen;
-          background-color: $whiteGreen;
-          border: 1px solid $whiteGreen;
-          border-top: none;
-          font-weight: bold;
-          padding: 16px 89px;
-          cursor: pointer;
-          @include btnFocus;
-        }
-      }
-    }
-    @media screen and (max-width: 375px) {
+    .desert-item {
       ul {
-        display: inline-block;
-        max-width: 640px;
+        width: 100%;
         li {
-          display: inline-block;
-          margin: 30px;
-          margin-bottom: 0;
-          width: 315px;
+          display: inline-flex;
+          flex-direction: column;
+          margin: 0 -4px 20px 20px;
+          width: 300px;
           .product-box {
+            position: relative;
             .product-box-img {
-              width: 315px;
+              width: 300px;
               height: 315px;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+            .today-box {
+              position: absolute;
+              left: 20px;
+              background-color: $darkGreen;
+              color: $white;
+              padding: 10px;
+              writing-mode: vertical-lr;
+              letter-spacing: 5px;
+              font-weight: 300;
+            }
+            .like {
+              position: absolute;
+              top: 20px;
+              right: 20px;
+              width: 25px;
             }
           }
           .product-box-item {
-            width: 315px;
+            width: 300px;
             height: 56px;
-            text-align: center;
             .product-box-dollar,
             .product-box-name {
               height: 56px;
@@ -169,28 +123,92 @@
               border: 1px solid $whiteGreen;
             }
             .product-box-name {
-              width: 183px;
-              padding: 15px auto;
+              width: 173px;
+              border-right: none;
+              font-weight: 300;
+              padding: 15px 33px 15px 33px;
             }
             .product-box-dollar {
-              width: 132px;
-              padding: 15px auto;
+              width: 127px;
+              font-weight: 500;
+              padding: 15px 20px 15px 25px;
             }
           }
           .add-btn {
-            width: 315px;
-            padding: 16px auto;
+            clear: both;
+            display: block;
+            font-size: $l-size;
+            color: $darkGreen;
+            background-color: $whiteGreen;
+            border: 1px solid $whiteGreen;
+            border-top: none;
+            font-weight: bold;
+            padding: 16px 89px;
+            cursor: pointer;
+            @include btnFocus;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+      .item-list {
+        display: inline-flex;
+        ul {
+          li {
+            display: inline-flex;
+            flex-direction: column;
+            width: 100%;
+            a {
+              display: inline-flex;
+              justify-content: center;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .desert-item {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          li {
+            display: inline-flex;
+            flex-direction: column;
+            margin: 0 10px 30px 0px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 425px) {
+      margin: 0;
+      .item-list {
+        display: flex;
+        ul {
+          li {
+            display: inline-flex;
+            flex-direction: column;
+            width: 100%;
+            margin-right: 0;
+            a {
+              display: inline-flex;
+              justify-content: center;
+              width: 100%;
+            }
           }
         }
       }
     }
   }
+
   .page-change {
+    display: flex;
+    justify-content: flex-end;
     height: 60px;
     margin-bottom: 60px;
     margin-top: 20px;
     ul {
-      float: right;
+      display: flex;
       li {
         float: left;
         border: 1px solid $whiteGreen;
@@ -228,12 +246,8 @@
         }
       }
     }
-    @media screen and (max-width: 375px) {
-      margin: 30px 10%;
-      display: block;
-      ul {
-        float: none;
-      }
+    @media screen and (max-width: 700px) {
+      justify-content: center;
     }
   }
 }
