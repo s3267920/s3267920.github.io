@@ -18,6 +18,9 @@
       color: $whiteGreen;
       font-weight: 400;
     }
+    .member_link {
+      display: none;
+    }
     > .password_box,
     .account_box {
       margin: 0 auto;
@@ -27,6 +30,7 @@
       background-color: $whiteGreen;
       > input {
         background-color: $whiteGreen;
+        color: $darkGreen;
         outline: none;
         width: 260px;
         height: 56px;
@@ -142,7 +146,6 @@
     .link_btn {
       a {
         display: inline;
-        background-color: $white;
       }
       input {
         width: $loginBtnWidth;
@@ -151,6 +154,7 @@
         background-size: 30%;
         background-position: center center;
         margin-bottom: 16px;
+        background-color: $white;
         &:focus {
           outline: $lightGreen;
           box-shadow: 0 0 5px $darkGreen;
@@ -174,6 +178,89 @@
         &:focus {
           background-image: url(../images/Yahoo.svg);
         }
+      }
+    }
+    @media screen and (max-width: 425px) {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    margin: 0;
+    > .member_login {
+      width: 100%;
+      height: auto;
+      .member_link {
+        display: flex;
+        width: 100%;
+        height: auto;
+        background-color: $whiteGreen;
+        .link_btn {
+          margin: 30px auto;
+          a {
+            display: inline;
+          }
+          input {
+            display: flex;
+            width: $loginBtnWidth;
+            height: $loginInputHeight;
+            background-repeat: no-repeat;
+            background-size: 30%;
+            background-position: center center;
+            margin-bottom: 16px;
+            background-color: $white;
+            &:focus {
+              outline: $lightGreen;
+              box-shadow: 0 0 5px $darkGreen;
+            }
+          }
+          .facebook_link {
+            background-size: 35%;
+            background-image: url(../images/Facebook_Logo-green.svg);
+            &:focus {
+              background-image: url(../images/Facebook_Logo.svg);
+            }
+          }
+          .google_link {
+            background-image: url(../images/Google_green_logo.svg);
+            &:focus {
+              background-image: url(../images/Google_2015_logo.svg);
+            }
+          }
+          .yahoo_link {
+            background-image: url(../images/Yahoo_green.svg);
+            &:focus {
+              background-image: url(../images/Yahoo.svg);
+            }
+          }
+        }
+      }
+      .account_box {
+        margin-top: 30px;
+      }
+    }
+    .link {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    > .member_login {
+      width: 100%;
+      height: auto;
+      .member_link {
+        .link_btn {
+          input {
+            display: inline-flex;
+            width: 105px;
+            height: 56px;
+            background-size: 80%;
+          }
+          .facebook_link {
+            background-size: 80%;
+          }
+        }
+      }
+      .account_box {
+        margin-top: 30px;
       }
     }
   }
