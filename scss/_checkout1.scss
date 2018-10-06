@@ -302,8 +302,7 @@
   justify-content: center;
   height: 460px;
   background-image: url(../images/brooke-lark-385507-unsplash.jpg);
-  background-position: center center;
-  background-size: cover;
+  @extend %background_cover;
   margin-bottom: 60px;
   .success {
     width: 94.79%;

@@ -3,8 +3,7 @@
   flex-direction: row-reverse;
   align-items: flex-start;
   background-image: url(../images/toa-heftiba-470545-unsplash.jpg);
-  background-size: cover;
-  background-position: center center;
+  @extend %background_cover;
   img {
     display: inline-flex;
     width: 9.4%;
@@ -90,9 +89,7 @@
             .product-box-img {
               width: 300px;
               height: 315px;
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center center;
+              @extend %background_cover;
             }
             .today-box {
               position: absolute;
