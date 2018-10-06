@@ -9,7 +9,7 @@
     margin-right: 20px;
     background-color: $darkGreen;
     h4 {
-      display: inline-block;
+      display: inline-flex;
       font-size: nth($font, 4);
       color: $whiteGreen;
       margin: 30px 40px;
@@ -123,7 +123,7 @@
       @include checkout_style;
       .name {
         label {
-          display: inline-block;
+          display: inline-flex;
           width: 186px;
           margin-bottom: 10px;
         }
@@ -300,19 +300,24 @@
 #success_content {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 94.79%;
   height: 460px;
+  margin: 0 auto;
   background-image: url(../images/brooke-lark-385507-unsplash.jpg);
-  @extend %background_cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   margin-bottom: 60px;
   .success {
-    width: 94.79%;
+    width: 100%;
     margin: 0 auto;
     .step_mark_done {
       width: 190px;
       margin-left: 0;
       display: block;
       margin: 0 auto;
-      margin-top: 130px;
       height: 22px;
       vertical-align: text-bottom;
       .step_box {
@@ -414,23 +419,46 @@
       margin-top: 30px;
       margin-bottom: 50px;
     }
-    a {
-      text-decoration: none;
-    }
+  }
+  a {
+    text-decoration: none;
     .go_home {
-      display: block;
+      display: flex;
       margin: 0 auto;
       width: 300px;
       text-align: center;
       cursor: pointer;
       height: 65px;
+      border: none;
       background-color: $yellow;
       color: $darkGreen;
       font-size: nth($font, 3);
       font-weight: 600;
+
       &:focus {
         outline: none;
         box-shadow: 0 0 2px $darkGreen;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+  }
+  @media (max-width: 425px) {
+    position: relative;
+    background-size: cover;
+    background-position: 50% 100%;
+    margin-bottom: 60px;
+    a {
+      width: 100%;
+      align-self: flex-end;
+      .go_home {
+        position: absolute;
+        bottom: -60px;
+        width: 100%;
+        margin: 0;
       }
     }
   }

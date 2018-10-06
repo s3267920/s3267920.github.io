@@ -133,7 +133,7 @@ table {
   border-spacing: 0;
 }
 
-.banner, .product_banner, #product-content .content_top .desert-item ul li .product-box .product-box-img, #success_content {
+.banner, .product_banner, #product-content .content_top .desert-item ul li .product-box .product-box-img {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2216,7 +2216,9 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 #checkout_content .shipping h4 {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   font-size: 36px;
   color: #eaf0ed;
   margin: 30px 40px;
@@ -2387,7 +2389,9 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 #checkout_content .shipping .personal_information .name label {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 186px;
   margin-bottom: 10px;
 }
@@ -2757,13 +2761,25 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 94.79%;
   height: 460px;
+  margin: 0 auto;
   background-image: url(../images/brooke-lark-385507-unsplash.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   margin-bottom: 60px;
 }
 
 #success_content .success {
-  width: 94.79%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -2772,7 +2788,6 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   margin-left: 0;
   display: block;
   margin: 0 auto;
-  margin-top: 130px;
   height: 22px;
   vertical-align: text-bottom;
 }
@@ -2885,26 +2900,56 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   margin-bottom: 50px;
 }
 
-#success_content .success a {
+#success_content a {
   text-decoration: none;
 }
 
-#success_content .success .go_home {
-  display: block;
+#success_content a .go_home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
   width: 300px;
   text-align: center;
   cursor: pointer;
   height: 65px;
+  border: none;
   background-color: #ffe180;
   color: #3f5d45;
   font-size: 24px;
   font-weight: 600;
 }
 
-#success_content .success .go_home:focus {
+#success_content a .go_home:focus {
   outline: none;
   -webkit-box-shadow: 0 0 2px #3f5d45;
           box-shadow: 0 0 2px #3f5d45;
+}
+
+@media (max-width: 768px) {
+  #success_content {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  #success_content {
+    position: relative;
+    background-size: cover;
+    background-position: 50% 100%;
+    margin-bottom: 60px;
+  }
+  #success_content a {
+    width: 100%;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  #success_content a .go_home {
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=all.css.map */
