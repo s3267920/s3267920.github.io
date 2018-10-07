@@ -34,9 +34,10 @@
       }
       .step_mark {
         width: 190px;
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: space-around;
+        flex-wrap: nowrap;
         height: 22px;
         vertical-align: text-bottom;
         margin-right: 8.69%;
@@ -46,7 +47,7 @@
           position: relative;
           input[type="radio"] {
             position: relative;
-            z-index: 1;
+            z-index: 0;
             opacity: 0;
             + .step::after {
               content: none;
@@ -59,35 +60,22 @@
             margin-right: 8.7%;
           }
           .step {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             position: absolute;
             z-index: 10;
-            top: 0;
-            left: -3px;
+            top: -2px;
+            left: -4px;
             height: 20px;
             width: 20px;
             border: 1px solid $whiteGreen;
             border-radius: 50%;
-            &::before {
-              position: absolute;
-              content: "";
-              display: inline-block;
-              height: 20px;
-              width: 20px;
-              border: 2px solid $whiteGreen;
-              border-radius: 50%;
-              top: -1px;
-              left: -1px;
-              opacity: 0.5;
-            }
             //圓心
             &::after {
-              position: absolute;
               content: "";
-              display: inline-block;
-              width: 14px;
-              height: 14px;
-              top: 2px;
-              left: 2px;
+              width: 12px;
+              height: 12px;
               border-radius: 50%;
               background-color: $whiteGreen;
             }
@@ -95,25 +83,13 @@
           .finish {
             position: absolute;
             z-index: 10;
-            top: 0;
+            top: -1px;
             left: -3px;
             height: 20px;
             width: 20px;
             border: 1px solid $whiteGreen;
             border-radius: 50%;
             background-color: $whiteGreen;
-            &::before {
-              position: absolute;
-              content: "";
-              display: inline-block;
-              height: 20px;
-              width: 20px;
-              border: 1px solid $whiteGreen;
-              border-radius: 50%;
-              top: -1px;
-              left: -1px;
-              opacity: 0.5;
-            }
             //打勾
             &::after {
               position: absolute;
@@ -134,7 +110,7 @@
           display: inline-block;
           width: 34.2%;
           vertical-align: middle;
-          border-top: 1px solid $whiteGreen;
+          border-top: 2px solid $whiteGreen;
           opacity: 0.5;
         }
       }
@@ -216,109 +192,6 @@
     }
     @media (max-width: 425px) {
       width: 100%;
-      .step_mark {
-        width: 190px;
-        display: inline-block;
-        margin-left: 25%;
-        height: 22px;
-        vertical-align: text-bottom;
-        .step_box {
-          display: inline-block;
-          position: relative;
-          input[type="radio"] {
-            position: relative;
-            z-index: 1;
-            opacity: 0;
-            + .step::after {
-              content: none;
-            }
-          }
-          input[checked] + .step::after {
-            content: "";
-          }
-          #step3 {
-            margin-right: 8.7%;
-          }
-          .step {
-            position: absolute;
-            z-index: 10;
-            top: 0;
-            left: -3px;
-            height: 20px;
-            width: 20px;
-            border: 1px solid $whiteGreen;
-            border-radius: 50%;
-            &::before {
-              position: absolute;
-              content: "";
-              display: inline-block;
-              height: 20px;
-              width: 20px;
-              border: 1px solid $whiteGreen;
-              border-radius: 50%;
-              top: -1px;
-              left: -1px;
-              opacity: 0.5;
-            }
-            //圓心
-            &::after {
-              position: absolute;
-              content: "";
-              display: inline-block;
-              width: 14px;
-              height: 14px;
-              top: 2px;
-              left: 2px;
-              border-radius: 50%;
-              background-color: $whiteGreen;
-            }
-          }
-          .finish {
-            position: absolute;
-            z-index: 10;
-            top: 0;
-            left: -3px;
-            height: 20px;
-            width: 20px;
-            border: 1px solid $whiteGreen;
-            border-radius: 50%;
-            background-color: $whiteGreen;
-            &::before {
-              position: absolute;
-              content: "";
-              display: inline-block;
-              height: 20px;
-              width: 20px;
-              border: 1px solid $whiteGreen;
-              border-radius: 50%;
-              top: -1px;
-              left: -1px;
-              opacity: 0.5;
-            }
-            //打勾
-            &::after {
-              position: absolute;
-              content: "";
-              z-index: 30;
-              display: inline-block;
-              height: 8px;
-              width: 13px;
-              left: 2px;
-              top: 3px;
-              border-left: 2px solid $darkGreen;
-              border-bottom: 2px solid $darkGreen;
-              transform: rotate(-45deg);
-            }
-          }
-        }
-        > span {
-          display: inline-block;
-          width: 34.2%;
-          vertical-align: middle;
-          border-top: 1px solid $whiteGreen;
-          opacity: 0.5;
-        }
-      }
       .personal_information {
         .name {
           label {

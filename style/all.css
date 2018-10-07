@@ -789,8 +789,8 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 .banner-card ul .popular {
-  border-right: 2px solid #fff;
-  border-left: 2px solid #fff;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
 }
 
 @media screen and (max-width: 769px) {
@@ -2199,14 +2199,16 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 #checkout_content .shipping .title .step_mark {
   width: 190px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   height: 22px;
   vertical-align: text-bottom;
   margin-right: 8.69%;
@@ -2220,7 +2222,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 #checkout_content .shipping .title .step_mark .step_box input[type="radio"] {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   opacity: 0;
 }
 
@@ -2237,37 +2239,29 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 #checkout_content .shipping .title .step_mark .step_box .step {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   z-index: 10;
-  top: 0;
-  left: -3px;
+  top: -2px;
+  left: -4px;
   height: 20px;
   width: 20px;
   border: 1px solid #eaf0ed;
   border-radius: 50%;
 }
 
-#checkout_content .shipping .title .step_mark .step_box .step::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border: 2px solid #eaf0ed;
-  border-radius: 50%;
-  top: -1px;
-  left: -1px;
-  opacity: 0.5;
-}
-
 #checkout_content .shipping .title .step_mark .step_box .step::after {
-  position: absolute;
   content: "";
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  top: 2px;
-  left: 2px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #eaf0ed;
 }
@@ -2275,26 +2269,13 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 #checkout_content .shipping .title .step_mark .step_box .finish {
   position: absolute;
   z-index: 10;
-  top: 0;
+  top: -1px;
   left: -3px;
   height: 20px;
   width: 20px;
   border: 1px solid #eaf0ed;
   border-radius: 50%;
   background-color: #eaf0ed;
-}
-
-#checkout_content .shipping .title .step_mark .step_box .finish::before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  border: 1px solid #eaf0ed;
-  border-radius: 50%;
-  top: -1px;
-  left: -1px;
-  opacity: 0.5;
 }
 
 #checkout_content .shipping .title .step_mark .step_box .finish::after {
@@ -2316,7 +2297,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   display: inline-block;
   width: 34.2%;
   vertical-align: middle;
-  border-top: 1px solid #eaf0ed;
+  border-top: 2px solid #eaf0ed;
   opacity: 0.5;
 }
 
@@ -2467,108 +2448,6 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 @media (max-width: 425px) {
   #checkout_content .shipping {
     width: 100%;
-  }
-  #checkout_content .shipping .step_mark {
-    width: 190px;
-    display: inline-block;
-    margin-left: 25%;
-    height: 22px;
-    vertical-align: text-bottom;
-  }
-  #checkout_content .shipping .step_mark .step_box {
-    display: inline-block;
-    position: relative;
-  }
-  #checkout_content .shipping .step_mark .step_box input[type="radio"] {
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-  }
-  #checkout_content .shipping .step_mark .step_box input[type="radio"] + .step::after {
-    content: none;
-  }
-  #checkout_content .shipping .step_mark .step_box input[checked] + .step::after {
-    content: "";
-  }
-  #checkout_content .shipping .step_mark .step_box #step3 {
-    margin-right: 8.7%;
-  }
-  #checkout_content .shipping .step_mark .step_box .step {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: -3px;
-    height: 20px;
-    width: 20px;
-    border: 1px solid #eaf0ed;
-    border-radius: 50%;
-  }
-  #checkout_content .shipping .step_mark .step_box .step::before {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border: 1px solid #eaf0ed;
-    border-radius: 50%;
-    top: -1px;
-    left: -1px;
-    opacity: 0.5;
-  }
-  #checkout_content .shipping .step_mark .step_box .step::after {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    top: 2px;
-    left: 2px;
-    border-radius: 50%;
-    background-color: #eaf0ed;
-  }
-  #checkout_content .shipping .step_mark .step_box .finish {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: -3px;
-    height: 20px;
-    width: 20px;
-    border: 1px solid #eaf0ed;
-    border-radius: 50%;
-    background-color: #eaf0ed;
-  }
-  #checkout_content .shipping .step_mark .step_box .finish::before {
-    position: absolute;
-    content: "";
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border: 1px solid #eaf0ed;
-    border-radius: 50%;
-    top: -1px;
-    left: -1px;
-    opacity: 0.5;
-  }
-  #checkout_content .shipping .step_mark .step_box .finish::after {
-    position: absolute;
-    content: "";
-    z-index: 30;
-    display: inline-block;
-    height: 8px;
-    width: 13px;
-    left: 2px;
-    top: 3px;
-    border-left: 2px solid #3f5d45;
-    border-bottom: 2px solid #3f5d45;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  #checkout_content .shipping .step_mark > span {
-    display: inline-block;
-    width: 34.2%;
-    vertical-align: middle;
-    border-top: 1px solid #eaf0ed;
-    opacity: 0.5;
   }
   #checkout_content .shipping .personal_information .name label {
     width: 49%;
