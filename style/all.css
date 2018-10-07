@@ -524,6 +524,11 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   cursor: pointer;
 }
 
+#footer .subscribe .email-box .submit-btn:hover,
+#footer .subscribe .email-box .submit-btn :focus {
+  background-color: #ffc91a;
+}
+
 #footer .subscribe .email-box .email:focus {
   border: none;
   -webkit-box-shadow: none;
@@ -724,8 +729,12 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 .banner-card ul li .background-box a {
   line-height: 25px;
-  text-align: center;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 25% 45.5%;
   color: #ffffff;
   font-size: 24px;

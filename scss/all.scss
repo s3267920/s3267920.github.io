@@ -270,6 +270,10 @@ header {
         width: 64px;
         height: 56px;
         cursor: pointer;
+        &:hover,
+        :focus {
+          background-color: adjust-color($yellow, $lightness: -20%);
+        }
       }
       //改變點擊後框的顏色
       .email:focus {

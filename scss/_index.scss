@@ -31,8 +31,8 @@
         display: inline-block;
         a {
           line-height: 25px;
-          text-align: center;
-          display: inline-block;
+          display: inline-flex;
+          justify-content: center;
           padding: 25% 45.5%;
           color: $white;
           font-size: nth($font, 3);
