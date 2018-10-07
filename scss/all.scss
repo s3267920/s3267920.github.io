@@ -1,10 +1,5 @@
 @import "_reset.scss";
 @import "_style.scss";
-%background_cover {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
 
 html {
   @include font_family;
@@ -246,7 +241,6 @@ header {
       height: 56px;
       margin: 30px 5% 30px 12%;
       .email-icon {
-        margin: 0;
         margin: 16px 0px 16px 20px;
         width: 24px;
         height: 24px;

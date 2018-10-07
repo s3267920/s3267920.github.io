@@ -133,7 +133,21 @@ table {
   border-spacing: 0;
 }
 
-.banner, .product_banner, #product-content .content_top .desert-item ul li .product-box .product-box-img {
+.banner-card ul .today-choose::before, .banner-card ul .popular::before, .banner-card ul .new-product::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+  z-index: -1;
+}
+
+.banner, #content ul li .product ul li .product-box .product-box-img, .product_banner, #product-content .content_top .desert-item ul li .product-box .product-box-img {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -496,7 +510,6 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 #footer .subscribe .email-box .email-icon {
-  margin: 0;
   margin: 16px 0px 16px 20px;
   width: 24px;
   height: 24px;
@@ -763,47 +776,14 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 }
 
 .banner-card ul .today-choose::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: blur(6px);
-          filter: blur(6px);
-  z-index: -1;
   background-image: url(../images/brooke-lark-230642-unsplash.jpg);
 }
 
 .banner-card ul .popular::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: blur(6px);
-          filter: blur(6px);
-  z-index: -1;
   background-image: url(../images/whitney-wright-356670-unsplash.jpg);
 }
 
 .banner-card ul .new-product::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  background-size: cover;
-  background-position: center;
-  -webkit-filter: blur(6px);
-          filter: blur(6px);
-  z-index: -1;
   background-image: url(../images/food-photographer-jennifer-pallian-306919-unsplash.jpg);
 }
 
@@ -965,9 +945,6 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 #content ul li .product ul li .product-box .product-box-img {
   width: 300px;
   height: 315px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 #content ul li .product ul li .product-box .today-box {

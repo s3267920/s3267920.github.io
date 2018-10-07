@@ -55,15 +55,15 @@
       }
     }
     .today-choose::before {
-      @include blur;
+      @extend %blur;
       background-image: url(../images/brooke-lark-230642-unsplash.jpg);
     }
     .popular::before {
-      @include blur;
+      @extend %blur;
       background-image: url(../images/whitney-wright-356670-unsplash.jpg);
     }
     .new-product::before {
-      @include blur;
+      @extend %blur;
       background-image: url(../images/food-photographer-jennifer-pallian-306919-unsplash.jpg);
     }
     .popular {
@@ -182,9 +182,7 @@
               .product-box-img {
                 width: 300px;
                 height: 315px;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;
+                @extend %background_cover;
               }
               .today-box {
                 position: absolute;
@@ -229,7 +227,7 @@
             .add-btn {
               clear: both;
               display: block;
-              font-size: $l-size;
+              font-size: nth($font, 3);
               color: $darkGreen;
               background-color: $whiteGreen;
               border: 1px solid $whiteGreen;

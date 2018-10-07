@@ -22,7 +22,7 @@ $l-size: 24px;
 $m-size: 20px;
 $s-size: 16px;
 
-@mixin blur {
+%blur {
   content: "";
   position: absolute;
   right: 0;
@@ -34,6 +34,13 @@ $s-size: 16px;
   filter: blur(6px);
   z-index: -1;
 }
+
+%background_cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 @mixin image {
   position: absolute;
   background-repeat: no-repeat;
