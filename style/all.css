@@ -261,14 +261,14 @@ header .nav-bar .cart {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-right: -40px;
+  margin-right: -30px;
   -webkit-box-ordinal-group: 11;
       -ms-flex-order: 10;
           order: 10;
 }
 
 header .nav-bar .cart a {
-  padding: 40px;
+  padding: 30px;
   padding-top: 39px;
 }
 
