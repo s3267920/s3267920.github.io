@@ -73,7 +73,7 @@
               display: inline-block;
               height: 20px;
               width: 20px;
-              border: 1px solid $whiteGreen;
+              border: 2px solid $whiteGreen;
               border-radius: 50%;
               top: -1px;
               left: -1px;
@@ -156,7 +156,7 @@
         input {
           display: inline-flex;
           flex-wrap: nowrap;
-          width: 49%;
+          width: 48%;
         }
         #firstName {
           margin-right: 0.5%;
@@ -577,12 +577,13 @@
     width: 100%;
     margin: 0 auto;
     .step_mark_done {
-      width: 190px;
+      width: 200px;
       margin-left: 0;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin: 0 auto;
       height: 22px;
-      vertical-align: text-bottom;
       .step_box {
         display: inline-block;
         position: relative;

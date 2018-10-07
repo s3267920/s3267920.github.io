@@ -15,7 +15,7 @@
     align-items: center;
     position: absolute;
     font-size: 0;
-    bottom: 33%;
+    bottom: 32%;
     left: 10%;
     right: 10%;
     margin: 0 auto;
@@ -211,17 +211,17 @@
                 float: left;
                 color: $darkGreen;
                 border: 1px solid $whiteGreen;
-                line-height: 56px;
-                text-align: center;
               }
               .product-box-name {
-                width: 171px;
+                width: 173px;
                 border-right: none;
                 font-weight: 300;
+                padding: 15px 33px 15px 33px;
               }
               .product-box-dollar {
-                width: 126px;
+                width: 127px;
                 font-weight: 500;
+                padding: 15px 20px 15px 20px;
               }
             }
             .add-btn {
