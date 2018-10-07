@@ -266,8 +266,6 @@
         .product {
           ul {
             margin: 0 7.5%;
-            li {
-            }
           }
         }
       }
@@ -337,25 +335,22 @@
             width: 100%;
             margin: 0;
             align-items: center;
-
-            li {
-            }
           }
         }
       }
-    }
-    @media screen and (max-width: 754px) {
-      li {
-        .product {
-          ul {
-            width: 100%;
-            margin: 0;
-            align-items: center;
+      @media screen and (max-width: 754px) {
+        li {
+          .product {
+            ul {
+              width: 100%;
+              margin: 0;
+              align-items: center;
 
-            li {
-              display: none;
-              &:first-child {
-                display: inline-flex;
+              li {
+                display: none;
+                &:first-child {
+                  display: inline-flex;
+                }
               }
             }
           }

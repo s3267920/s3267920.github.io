@@ -1123,7 +1123,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
   }
 }
 
-@media screen and (max-width: 754px) {
+@media screen and (max-width: 754px) and (max-width: 754px) {
   #content ul li .product ul {
     width: 100%;
     margin: 0;
