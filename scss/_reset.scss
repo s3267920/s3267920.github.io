@@ -89,6 +89,7 @@ video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -125,4 +126,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+input {
+  box-sizing: border-box !important;
 }

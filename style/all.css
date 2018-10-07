@@ -89,6 +89,8 @@ video {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -131,6 +133,11 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+input {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 .banner-card ul .today-choose::before, .banner-card ul .popular::before, .banner-card ul .new-product::before {
