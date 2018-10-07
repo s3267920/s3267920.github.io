@@ -20,17 +20,17 @@
     {
       "format": "compact",
       "extensionName": ".css",
-      "savePath": "/style"
+      "savePath": "/dist/style"
     },
     {
       "format": "compressed",
       "extensionName": ".min.css",
-      "savePath": "/dist/style"
+      "savePath": "/style"
     },
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/style"
+      "savePath": "/dist/style"
     }
   ],
   "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]

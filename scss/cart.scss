@@ -1,0 +1,204 @@
+@import "_style.scss";
+
+.cart_content {
+  margin: 40px auto;
+  width: 91.76%;
+  height: auto;
+  display: flex;
+  .my_cart {
+    display: flex;
+    flex-direction: column;
+    width: 65.95%; //620
+    margin-right: 20px;
+    > h4 {
+      font-size: nth($font, 3);
+      text-align: center;
+      color: $darkGreen;
+      background-color: $whiteGreen;
+      padding: 18px 0;
+      margin-bottom: 13px;
+    }
+    .cart_list {
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 2.12% 0;
+      border-bottom: 1px solid $whiteGreen;
+      &:last-child {
+        border-bottom: none;
+      }
+      > .cart_list_img {
+        display: inline-flex;
+        background-position: center center;
+        background-size: cover;
+        width: 110px;
+        height: 110px;
+        margin-right: 6.45%;
+      }
+      > .cart_list_context {
+        display: inline-flex;
+        flex-direction: column;
+        color: $lightGreen;
+        p {
+          font-size: nth($font, 2);
+          line-height: 200%;
+        }
+      }
+      > .how_many {
+        display: flex;
+        justify-items: safe flex-end;
+        margin-left: 6.45%;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          width: 48px;
+          height: 48px;
+          text-align: center;
+          color: $lightGreen;
+          border: 1px solid $whiteGreen;
+          > input[type="button"] {
+            color: $lightGreen;
+            background-color: $white;
+            width: 100%;
+            height: 100%;
+            border-color: #fff;
+            &:focus {
+              outline: $darkGreen;
+              box-shadow: 0 0 5px $darkGreen;
+            }
+          }
+        }
+      }
+      .total_price {
+        display: flex;
+        justify-items: flex-end;
+        flex-wrap: nowrap;
+        margin-left: auto;
+        > .price {
+          display: inline-flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          width: 85px;
+          // margin-left: 40px;
+          font-size: nth($font, 2);
+          color: $darkGreen;
+          font-weight: 500;
+        }
+        > .delete {
+          display: inline-block;
+          margin-left: 35px;
+          vertical-align: middle;
+          @include icon;
+          background-color: $lightGreen;
+          mask-image: url(../images/delete.svg);
+        }
+      }
+    }
+  }
+  .bill {
+    width: 300px;
+    height: 256px;
+    background-color: $darkGreen;
+    color: $whiteGreen;
+    > h4 {
+      text-align: center;
+      font-size: nth($font, 3);
+      font-weight: 300;
+      margin: 20px auto;
+    }
+    .line {
+      border-top: 1px solid $whiteGreen;
+      margin: 0 20px;
+    }
+    > ul {
+      margin: 20px 18px;
+      li {
+        margin-bottom: 15px;
+        font-weight: lighter;
+        > span {
+          float: right;
+          letter-spacing: 1px;
+          margin-right: 5px;
+        }
+      }
+      .total_title {
+        font-size: nth($font, 2);
+        font-weight: 400;
+        margin-top: 20px;
+      }
+    }
+    .checkout {
+      width: 100%;
+      height: 65px;
+      background-color: $yellow;
+      color: $darkGreen;
+      font-weight: bold;
+      text-align: center;
+      font-size: nth($font, 3);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    .my_cart {
+      width: 100%;
+      margin: 0 20px;
+      .cart_list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        > .how_many {
+          display: inline-flex;
+          margin-left: auto;
+        }
+        .total_price {
+          display: inline-flex;
+          margin-left: auto;
+          > .price {
+            width: 85px;
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-size: nth($font, 2);
+            color: $darkGreen;
+            font-weight: 500;
+          }
+          > .delete {
+            display: inline-block;
+            margin-left: 3.72%;
+          }
+        }
+      }
+    }
+    .bill {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      h4 {
+        background-color: $whiteGreen;
+        color: $lightGreen;
+        margin: 0 auto;
+        padding: 16px 0;
+      }
+      li {
+        color: $lightGreen;
+      }
+      .line {
+        border-top: none;
+        margin: 0;
+      }
+      .checkout {
+        width: 100%;
+        background-color: $yellow;
+        color: $darkGreen;
+      }
+    }
+  }
+}
