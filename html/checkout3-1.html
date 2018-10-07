@@ -9,7 +9,7 @@
   <meta property="og:description" content="想吃甜點是不需要理由的～">
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://s3267920.github.io/sweetaste/html/index.html" />
-  <meta property="og:image" content="../images/amy-shamblen-784211-unsplash.jpg" />
+  <meta property="og:image" content="../images/banner_1200.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../images/logo.ico">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' />
@@ -19,7 +19,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="../style/checkout.min.css" />
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js'></script>
-
+  <script src="../js/tw-city-selector.min.js"></script>
 </head>
 
 <body>
@@ -54,7 +54,7 @@
   <div class="clearfix"></div>
 
   <div id="checkout_content" class="cart_content">
-    <div class="payment shipping receipt  receipt_cui ">
+    <div class="payment shipping receipt  receipt_cui  receipt_mail">
       <div class="title">
         <h4>付款</h4>
         <div class="step_mark">
@@ -87,7 +87,6 @@
           <label for="receipt_num">統一編號（選填）</label>
           <input type="text " id="receipt_num" placeholder="12345678 ">
         </div>
-
       </div>
 
 
@@ -167,6 +166,7 @@
 
 
   <script src="../js/main.js"></script>
+  <script src="../js/checkout.js"></script>
 </body>
 
 </html>
