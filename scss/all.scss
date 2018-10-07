@@ -1,8 +1,11 @@
 @import "_reset.scss";
 @import "_style.scss";
 
+* {
+  font-family: "PingFang", "Helvetica Neue", times, "Microsoft JhengHei",
+    "微軟正黑體";
+}
 html {
-  @include font_family;
   height: 100%;
 }
 body {

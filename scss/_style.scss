@@ -72,11 +72,6 @@ $s-size: 16px;
   height: 24px;
 }
 
-@mixin font_family {
-  font-family: "PingFang", "Helvetica Neue", times, "Microsoft JhengHei",
-    "微軟正黑體";
-}
-
 @mixin checkout_style {
   margin: 0 auto;
   width: 82.6%;
