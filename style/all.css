@@ -718,7 +718,7 @@ header .nav-bar .nav .nav-menu li a:hover, header .nav-bar .nav .nav-menu li a:a
 
 .banner-card ul li .background-box {
   width: 100%;
-  background: #3f5d45;
+  background: rgba(63, 93, 69, 0.8);
   display: inline-block;
 }
 
