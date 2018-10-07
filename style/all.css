@@ -155,6 +155,8 @@ table {
 
 * {
   font-family: "PingFang", "Helvetica Neue", times, "Microsoft JhengHei", "微軟正黑體";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
