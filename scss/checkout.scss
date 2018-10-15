@@ -258,7 +258,7 @@
           box-shadow: 0 0 2px $whiteGreen;
         }
       }
-      input[checked] {
+      a > .check {
         background-color: $whiteGreen;
         color: $darkGreen;
       }
@@ -289,6 +289,10 @@
         }
       }
     }
+  }
+
+  .hidden {
+    display: none;
   }
 
   .order {
@@ -602,40 +606,3 @@
     }
   }
 }
-
-// > #CUI:target {
-//   ~ .tag_change {
-//     .receipt_btn {
-//       a[href="#CUI"] {
-//         > input {
-//           &:focus {
-//             background-color: $whiteGreen;
-//             color: $darkGreen;
-//           }
-//         }
-//       }
-//     }
-//     > div.for_mail {
-//       visibility: hidden;
-//       height: 0;
-//     }
-//   }
-// }
-// #for_mail:target {
-//   ~ .tag_change {
-//     ~ .receipt_btn {
-//       a[href="#for_mail"] {
-//         > input {
-//           &:focus {
-//             background-color: $whiteGreen;
-//             color: $darkGreen;
-//           }
-//         }
-//       }
-//     }
-//     > div.CUI {
-//       visibility: hidden;
-//       height: 0;
-//     }
-//   }
-// }

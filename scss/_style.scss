@@ -22,6 +22,12 @@ $l-size: 24px;
 $m-size: 20px;
 $s-size: 16px;
 
+@mixin background {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 %blur {
   content: "";
   position: absolute;
@@ -29,8 +35,7 @@ $s-size: 16px;
   bottom: 0;
   left: 0;
   top: 0;
-  background-size: cover;
-  background-position: center;
+  @include background;
   filter: blur(6px);
   z-index: -1;
 }
